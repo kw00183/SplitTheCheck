@@ -28,22 +28,12 @@
 
   <div class="field">
     <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.select :state, options_for_select(us_states, :selected => form.object.state) %>
   </div>
 
   <div class="field">
     <%= form.label :zip %>
     <%= form.text_field :zip %>
-  </div>
-
-  <div class="field">
-    <%= form.label :will_split_count %>
-    <%= form.number_field :will_split_count %>
-  </div>
-
-  <div class="field">
-    <%= form.label :wont_split_count %>
-    <%= form.number_field :wont_split_count %>
   </div>
 
   <div class="actions">

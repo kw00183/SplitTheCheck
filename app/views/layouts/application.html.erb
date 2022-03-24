@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SplitTheCheck</title>
+    <title>Split The Check</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <header class='main'>
+      <h1>To Split or Not To Split</h1>
+      <h3>vote if a restaurant will split the check</h3>
+    </header>
+    <main class='<%= controller.controller_name %>'>
+      <%= yield %>
+    </main>
   </body>
 </html>

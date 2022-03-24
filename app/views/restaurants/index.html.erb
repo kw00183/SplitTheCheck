@@ -1,6 +1,58 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
 
-<h1>Restaurants</h1>
+<h3>Search for Restaurants by:</h3>
+
+<div>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Name"> Name</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Address"> Address</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="City"> City</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="State"> State</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Zip"> Zip</label>
+</div>
+<div class="Name search">
+  <%= form_tag :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :name => nil) %>
+  <% end %>
+</div>
+<div class="Address search">
+  <%= form_tag :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :address => nil) %>
+  <% end %>
+</div>
+<div class="City search">
+  <%= form_tag :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :city => nil) %>
+  <% end %>
+</div>
+<div class="State search">
+  <%= form_tag :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :state => nil) %>
+  <% end %>
+</div>
+<div class="Zip search">
+  <%= form_tag :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :zip => nil) %>
+  <% end %>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('input[type="radio"]').click(function() {
+      var inputValue = $(this).attr("value");
+      var targetBox = $("." + inputValue);
+      $(".search").not(targetBox).hide();
+      $(targetBox).show();
+    });
+  });
+</script>
+
+<hr>
 
 <table>
   <thead>
@@ -10,9 +62,9 @@
       <th>City</th>
       <th>State</th>
       <th>Zip</th>
-      <th>Will split count</th>
-      <th>Wont split count</th>
-      <th colspan="3"></th>
+      <th>Will Split</th>
+      <th>Won't Split</th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -28,7 +80,6 @@
         <td><%= restaurant.wont_split_count %></td>
         <td><%= link_to 'Show', restaurant %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

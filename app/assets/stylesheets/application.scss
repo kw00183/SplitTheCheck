@@ -22,8 +22,19 @@
     @media (min-width: 30em) {
       text-align: left; // left align on desktop
     }
-    background: BB9981;
-    color: #FFFFFF;
+    background: #C5D8A4;
+    color: #362706;
     padding: 2em;
     margin: 0;
+  }
+  .search {
+    color: #fff;
+    padding: 1em;
+    display: none;
+    width: 60%;
+  }
+  .search_radio_label {
+    margin-right: 20px;
+    display: inline;
+    padding-bottom: 1em;
   }
