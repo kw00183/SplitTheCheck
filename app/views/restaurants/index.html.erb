@@ -5,7 +5,7 @@
 <h3>Search for Restaurants by:</h3>
 
 <div>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Name"> Name</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Name" checked> Name</label>
   <label class="search_radio_label"><input type="radio" name="searchRadio" value="Address"> Address</label>
   <label class="search_radio_label"><input type="radio" name="searchRadio" value="City"> City</label>
   <label class="search_radio_label"><input type="radio" name="searchRadio" value="State"> State</label>
@@ -43,6 +43,10 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function() {
+    var targetBox = $("." + "Name");
+    $(".search").not(targetBox).hide();
+    $(targetBox).show();
+
     $('input[type="radio"]').click(function() {
       var inputValue = $(this).attr("value");
       var targetBox = $("." + inputValue);
