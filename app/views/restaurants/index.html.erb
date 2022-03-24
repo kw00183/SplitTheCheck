@@ -20,25 +20,25 @@
 <div class="Address search">
   <%= form_tag :method => "get" do %>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :address => nil) %>
+    <%= submit_tag("Search", :name => nil) %>
   <% end %>
 </div>
 <div class="City search">
   <%= form_tag :method => "get" do %>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :city => nil) %>
+    <%= submit_tag("Search", :name => nil) %>
   <% end %>
 </div>
 <div class="State search">
   <%= form_tag :method => "get" do %>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :state => nil) %>
+    <%= submit_tag("Search", :name => nil) %>
   <% end %>
 </div>
 <div class="Zip search">
   <%= form_tag :method => "get" do %>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :zip => nil) %>
+    <%= submit_tag("Search", :name => nil) %>
   <% end %>
 </div>
 <script type="text/javascript">
@@ -52,6 +52,8 @@
   });
 </script>
 
+<% if @restaurants.nil? %>
+<br>
 <hr>
 
 <table>
@@ -84,7 +86,9 @@
     <% end %>
   </tbody>
 </table>
+<% else %>
 
 <br>
 
 <%= link_to 'New Restaurant', new_restaurant_path %>
+<% end %>
