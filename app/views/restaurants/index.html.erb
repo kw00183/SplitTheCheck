@@ -12,34 +12,34 @@
   <label class="search_radio_label"><input type="radio" name="searchRadio" value="Zip"> Zip</label>
 </div>
 <div class="Name search">
-  <%= form_tag :method => "get" do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :name => nil) %>
-  <% end %>
+  <form action="/search">
+    <input type="text" name="name" placeholder="Search">
+    <button type="submit">Search Name</button>
+  </form>
 </div>
 <div class="Address search">
-  <%= form_tag :method => "get" do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :name => nil) %>
-  <% end %>
+  <form action="/search">
+    <input type="text" name="address" placeholder="Search">
+    <button type="submit">Search Address</button>
+  </form>
 </div>
 <div class="City search">
-  <%= form_tag :method => "get" do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :name => nil) %>
-  <% end %>
+  <form action="/search">
+    <input type="text" name="city" placeholder="Search">
+    <button type="submit">Search City</button>
+  </form>
 </div>
 <div class="State search">
-  <%= form_tag :method => "get" do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :name => nil) %>
-  <% end %>
+  <form action="/search">
+    <input type="text" name="state" placeholder="Search">
+    <button type="submit">Search State</button>
+  </form>
 </div>
 <div class="Zip search">
-  <%= form_tag :method => "get" do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag("Search", :name => nil) %>
-  <% end %>
+  <form action="/search">
+    <input type="text" name="zip" placeholder="Search">
+    <button type="submit">Search Zip</button>
+  </form>
 </div>
 <script type="text/javascript">
   $(document).ready(function() {
@@ -56,7 +56,7 @@
   });
 </script>
 
-<% if @restaurants.nil? %>
+<% if @restaurants.blank? == false %>
 <br>
 <hr>
 
@@ -90,6 +90,7 @@
     <% end %>
   </tbody>
 </table>
+
 <% else %>
 
 <br>

@@ -1,9 +1,33 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: %i[ show edit update destroy ]
 
+  def inititialize
+    list = Restaurant.where("name IS NULL")
+    self.set_restaurants(list)
+  end
+
   # GET /restaurants or /restaurants.json
   def index
-    @restaurants = Restaurant.search(params[:search])
+    if params.has_key?(:name)
+      list = Restaurant.where("name LIKE ?", "%" + params[:name] + "%")
+      self.set_restaurants(list)
+    elsif params.has_key?(:address)
+      list = Restaurant.where("address LIKE ?", "%" + params[:address] + "%")
+      self.set_restaurants(list)
+    elsif params.has_key?(:city)
+      list = Restaurant.where("city LIKE ?", "%" + params[:city] + "%")
+      self.set_restaurants(list)
+    elsif params.has_key?(:state)
+      list = Restaurant.where("state LIKE ?", "%" + params[:state] + "%")
+      self.set_restaurants(list)
+    elsif params.has_key?(:zip)
+      list = Restaurant.where("zip LIKE ?", "%" + params[:zip] + "%")
+      self.set_restaurants(list)
+    else
+      list = Restaurant.where("name IS NULL")
+      self.set_restaurants(list)
+    end
+    self.get_restaurants
   end
 
   # GET /restaurants/1 or /restaurants/1.json
@@ -17,6 +41,18 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1/edit
   def edit
+  end
+
+  def reset_session
+    session.clear
+  end
+
+  def get_restaurants
+    return @restaurants
+  end
+
+  def set_restaurants(list)
+    @restaurants = list
   end
 
   # POST /restaurants or /restaurants.json
