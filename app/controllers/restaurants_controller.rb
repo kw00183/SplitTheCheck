@@ -4,30 +4,59 @@ class RestaurantsController < ApplicationController
   def inititialize
     list = Restaurant.where(name: [nil, ""])
     self.set_restaurants(list)
+    @radio_checked_name = "checked"
   end
 
   # GET /restaurants or /restaurants.json
   def index
+    self.reset_radio
+
     if params[:name].blank? == false
       list = Restaurant.where("name LIKE ?", "%" + params[:name] + "%")
       self.set_restaurants(list)
+      @radio_checked_name = "checked"
+      @display_div_name = "display: block;"
     elsif params[:address].blank? == false
       list = Restaurant.where("address LIKE ?", "%" + params[:address] + "%")
       self.set_restaurants(list)
+      @radio_checked_address = "checked"
+      @display_div_address = "display: block;"
     elsif params[:city].blank? == false
       list = Restaurant.where("city LIKE ?", "%" + params[:city] + "%")
       self.set_restaurants(list)
+      @radio_checked_city = "checked"
+      @display_div_city = "display: block;"
     elsif params[:state].blank? == false
       list = Restaurant.where("state LIKE ?", "%" + params[:state] + "%")
       self.set_restaurants(list)
+      @radio_checked_state = "checked"
+      @display_div_state = "display: block;"
     elsif params[:zip].blank? == false
       list = Restaurant.where("zip LIKE ?", "%" + params[:zip] + "%")
       self.set_restaurants(list)
+      @radio_checked_zip = "checked"
+      @display_div_zip = "display: block;"
     else
       list = Restaurant.where(name: [nil, ""])
       self.set_restaurants(list)
+      @radio_checked_name = "checked"
+      @display_div_name = "display: block;"
     end
     self.get_restaurants
+  end
+
+  def reset_radio
+    @radio_checked_name = ""
+    @radio_checked_address = ""
+    @radio_checked_city = ""
+    @radio_checked_state = ""
+    @radio_checked_zip = ""
+
+    @display_div_name = "display: none;"
+    @display_div_address = "display: none;"
+    @display_div_city = "display: none;"
+    @display_div_state = "display: none;"
+    @display_div_zip = "display: none;"
   end
 
   # GET /restaurants/1 or /restaurants/1.json

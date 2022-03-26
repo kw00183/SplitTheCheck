@@ -5,49 +5,45 @@
 <h3>Search for Restaurants by:</h3>
 
 <div>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Name" checked> Name</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Address"> Address</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="City"> City</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="State"> State</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Zip"> Zip</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Name" <%= @radio_checked_name %>> Name</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Address" <%= @radio_checked_address %>> Address</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="City" <%= @radio_checked_city %>> City</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="State" <%= @radio_checked_state %>> State</label>
+  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Zip" <%= @radio_checked_zip %>> Zip</label>
 </div>
-<div class="Name search">
+<div class="Name search" style="<%= @display_div_name %>">
   <form action="/search">
-    <input type="text" name="name" placeholder="Search">
-    <button type="submit">Search Name</button>
+    <input type="text" name="name" placeholder="Name" value="<%= params[:name] %>">
+    <button type="submit">Search</button>
   </form>
 </div>
-<div class="Address search">
+<div class="Address search" style="<%= @display_div_address %>">
   <form action="/search">
-    <input type="text" name="address" placeholder="Search">
-    <button type="submit">Search Address</button>
+    <input type="text" name="address" placeholder="Address" value="<%= params[:address] %>">
+    <button type="submit">Search</button>
   </form>
 </div>
-<div class="City search">
+<div class="City search" style="<%= @display_div_city %>">
   <form action="/search">
-    <input type="text" name="city" placeholder="Search">
-    <button type="submit">Search City</button>
+    <input type="text" name="city" placeholder="City" value="<%= params[:city] %>">
+    <button type="submit">Search</button>
   </form>
 </div>
-<div class="State search">
+<div class="State search" style="<%= @display_div_state %>">
   <form action="/search">
-    <%= select_tag :state, options_for_select(us_states) %>
-    <button type="submit">Search State</button>
+    <%= select_tag :state, options_for_select(us_states, params[:state]) %>
+    <button type="submit">Search</button>
   </form>
 </div>
-<div class="Zip search">
+<div class="Zip search" style="<%= @display_div_zip %>">
   <form action="/search">
-    <input type="text" name="zip" placeholder="Search">
-    <button type="submit">Search Zip</button>
+    <input type="text" name="zip" placeholder="Zip" value="<%= params[:zip] %>">
+    <button type="submit">Search</button>
   </form>
 </div>
 <script type="text/javascript">
   $(document).ready(function() {
-    var targetBox = $("." + "Name");
-    $(".search").not(targetBox).hide();
-    $(targetBox).show();
-
-    $('input[type="radio"]').click(function() {
+    $('input[type="radio"]').change(function() {
       var inputValue = $(this).attr("value");
       var targetBox = $("." + inputValue);
       $(".search").not(targetBox).hide();
