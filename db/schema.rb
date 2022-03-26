@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2022_03_24_021054) do
     t.string "city"
     t.string "state"
     t.string "zip"
-    t.integer "will_split_count"
-    t.integer "wont_split_count"
+    t.integer "will_split_count", default: 0
+    t.integer "wont_split_count", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -6,8 +6,8 @@ class CreateRestaurants < ActiveRecord::Migration[6.1]
       t.string :city
       t.string :state
       t.string :zip
-      t.integer :will_split_count
-      t.integer :wont_split_count
+      t.integer :will_split_count, :default => 0
+      t.integer :wont_split_count, :default => 0
 
       t.timestamps
     end
