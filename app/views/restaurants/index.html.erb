@@ -5,11 +5,11 @@
 <h3>Search for Restaurants by:</h3>
 
 <div>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Name" <%= @radio_checked_name %>> Name</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Address" <%= @radio_checked_address %>> Address</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="City" <%= @radio_checked_city %>> City</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="State" <%= @radio_checked_state %>> State</label>
-  <label class="search_radio_label"><input type="radio" name="searchRadio" value="Zip" <%= @radio_checked_zip %>> Zip</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" value="Name" <%= @radio_checked_name %>> Name</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" value="Address" <%= @radio_checked_address %>> Address</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" value="City" <%= @radio_checked_city %>> City</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" value="State" <%= @radio_checked_state %>> State</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" value="Zip" <%= @radio_checked_zip %>> Zip</label>
 </div>
 <div class="Name search" style="<%= @display_div_name %>">
   <form action="/search">

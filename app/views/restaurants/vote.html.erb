@@ -1,0 +1,34 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h3>Vote on Splitting: Will/Won't They</h3>
+
+<p>
+  <strong><%= @restaurant.name %></strong>
+</p>
+
+<p>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zip %>
+</p>
+
+<br>
+
+<h3>Cast your vote!</h3>
+<%= form_tag('/vote', :method => "get") do %>
+  <table>
+    <tr>
+      <td><%= radio_button_tag(:vote, "Will", :id, restaurant.id) %> Will Split</td>
+      <td><%= radio_button_tag(:vote, "Won't", :id, restaurant.id) %> Won't Split</td>
+    </tr>
+  </table>
+  <%= submit_tag("Vote") %>
+<% end %>
+
+<span>
+  <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>
+</span>
