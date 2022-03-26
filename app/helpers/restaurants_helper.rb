@@ -1,6 +1,6 @@
 module RestaurantsHelper
   def us_states
-  [
+    [
     ['AK', 'AK'],
     ['AL', 'AL'],
     ['AR', 'AR'],
@@ -52,7 +52,7 @@ module RestaurantsHelper
     ['WI', 'WI'],
     ['WV', 'WV'],
     ['WY', 'WY']
-  ]
+    ]
   end
 
 end
