@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
   def inititialize
     self.clear_restaurants_list
     @search_made = false
+    self.up
   end
 
   # GET /restaurants or /restaurants.json
