@@ -1,999 +1,200 @@
-﻿Name,Address,City,State,Zip
-Chili's Grill & Bar,11555 Dallas Pkwy,Frisco,TX,75034
-Lazy Dog Restaurant & Bar,8401 Preston Rd,Plano,TX,75024
-The Community Grill,2525 Main St #400,Frisco,TX,75034
-Maple Street Biscuit Company Frisco,3288 Main St #111,Frisco,TX,75034
-54th Street Restaurant & Drafthouse-Frisco,9449 Dallas Pkwy,Frisco,TX,75033
-Mario's Mexican & Salvadorian Restaurant,2831 Eldorado Pkwy #112,Little Elm,TX,75068
-Eggsellent Cafe,12388 FM 423,Frisco,TX,75033
-Frisco Diner,9250 Dallas Pkwy,Frisco,TX,75033
-Applebee's Grill + Bar,2672 FM 423,Little Elm,TX,75068
-Uncork'd Bar & Grill Frisco,615 Main St Suite 100,Frisco,TX,75034
-Bar Siena,832 W Randolph St,Chicago,IL,60607
-Barrio,65 W Kinzie St,Chicago,IL,60654
-Girl & The Goat,809 W Randolph St,Chicago,IL,60607
-Virtue Restaurant,1462 E 53rd St,Chicago,IL,60615
-Boka,1729 N Halsted St,Chicago,IL,60614
-The Purple Pig Restaurant,444 Michigan Ave,Chicago,IL,60611
-Quality Bistro,120 W 55th St,New York,NY,10019
-Scarpetta,88 Madison Ave,New York,NY,10016
-Orsay,1057 Lexington Ave,New York,NY,10021
-Gabriel Kreuther,41 W 42nd St,New York,NY,10036
-1803 NYC,82 Reade St,New York,NY,10007
-ilili Restaurant NYC,236 5th Ave,New York,NY,10001
-Marea,240 Central Park S,New York,NY,10019
-Le Coucou,138 Lafayette St,New York,NY,10013
-Boucherie Union Square,225 Park Ave S,New York,NY,10003
-Lazy Dog Restaurant & Bar,3525 W Carson St,Torrance,CA,90503
-La Unica Taqueria & Restaurant,6942 Pecan St,Frisco,TX,75034
-République Café Bakery & République Restaurant,624 S La Brea Ave,Los Angeles,CA,90036
-Perch,448 S Hill St,Los Angeles,CA,90013
-Bavel,500 Mateo St,Los Angeles,CA,90013
-71Above,633 W 5th St 71st floor,Los Angeles,CA,90071
-Majordomo,1725 Naud St,Los Angeles,CA,90012
-Bestia,2121 E 7th Pl,Los Angeles,CA,90021
-Redbird,114 E 2nd St,Los Angeles,CA,90012
-The Factory Kitchen,1300 Factory Pl,Los Angeles,CA,90013
-Water Grill San Diego,615 J St,San Diego,CA,92101
-Searsucker San Diego,611 Fifth Ave,San Diego,CA,92101
-Top of the Market - San Diego,750 N Harbor Dr,San Diego,CA,92101
-Born and Raised,1909 India St,San Diego,CA,92101
-Mister A's,2550 Fifth Ave 12th floor,San Diego,CA,92103
-Ironside Fish & Oyster,1654 India St,San Diego,CA,92101
-North Italia,2301 N Akard St Suite 280,Dallas,TX,75201
-Toulouse,3314 Knox St,Dallas,TX,75205
-Meso Maya Comida y Copas,1611 McKinney Ave,Dallas,TX,75202
-Al Biernat's,4217 Oak Lawn Ave,Dallas,TX,75219
-Yardbird Table & Bar,2121 N Pearl St St 170,Dallas,TX,75201
-Doc B's,2021 McKinney Ave #190,Dallas,TX,75201
-Kenny's Wood Fired Grill,5000 Belt Line Rd #775,Dallas,TX,75254
-Iron Cactus Mexican Restaurant and Margarita Bar,200 River Walk Suite 100,San Antonio,TX,78205
-Boudro's on the Riverwalk,"On The Riverwalk Level, 421 E Commerce St",San Antonio,TX,78205
-Paesanos Riverwalk,111 W Crockett St #101,San Antonio,TX,78205
-Iron Cactus Mexican Restaurant and Margarita Bar,200 River Walk Suite 100,San Antonio,TX,78205
-Bier Garten Riverwalk,126 Losoya St,San Antonio,TX,78205
-Biga on the Banks - San Antonio Riverwalk Restaurant,203 S St Mary's St,San Antonio,TX,78205
-The Republic of Texas Restaurant,526 River Walk St,San Antonio,TX,78205
-Vic & Anthony's Steakhouse,1510 Texas Ave,Houston,TX,77002
-State of Grace,3258 Westheimer Rd,Houston,TX,77098
-Riel,1927 Fairview St,Houston,TX,77019
-Brennan's of Houston,3300 Smith St,Houston,TX,77006
-RA Sushi Bar Restaurant,117 W 4th St STE 300,Austin,TX,78701
-Hestia,607 W 3rd St Suite 105,Austin,TX,78701
-Launderette,2115 Holly St,Austin,TX,78702
-ATX Cocina,110 San Antonio St #170,Austin,TX,78701
-Odd Duck,1201 S Lamar Blvd,Austin,TX,78704
-South City Kitchen Buckhead,3350 Peachtree Rd NE Suite 175,Atlanta,GA,30326
-Poor Calvin's,510 Piedmont Ave NE,Atlanta,GA,30308
-Bones Restaurant,3130 Piedmont Rd NE,Atlanta,GA,30305
-Ecco Midtown,40 7th St NE,Atlanta,GA,30308
-TWO urban licks,820 Ralph McGill Blvd NE,Atlanta,GA,30306
-The Vortex,438 Moreland Ave NE,Atlanta,GA,30307
-Ray's In the City,240 Peachtree St,Atlanta,GA,30303
-Cochon Restaurant,930 Tchoupitoulas St suite a,New Orleans,LA,70130
-GW Fins,808 Bienville St,New Orleans,LA,70112
-Commander's Palace,1403 Washington Ave,New Orleans,LA,70130
-Arnaud's,813 Bienville St,New Orleans,LA,70112
-Brennan's,417 Royal St,New Orleans,LA,70130
-Olde Nola Cookery,205 Bourbon St,New Orleans,LA,70130
-The Pink Door,1919 Post Alley,Seattle,WA,98101
-Shaker + Spear,2000 2nd Ave,Seattle,WA,98121
-Canlis,2576 Aurora Ave N,Seattle,WA,98109
-Spinasse,1531 14th Ave,Seattle,WA,98122
-Le Pichet,1933 1st Ave,Seattle,WA,98101
-The Capital Grille,1301 4th Ave,Seattle,WA,98101
-Sotto Mare,552 Green St,San Francisco,CA,94133
-Delancey Street Restaurant,600 The Embarcadero,San Francisco,CA,94107
-Cotogna,490 Pacific Ave,San Francisco,CA,94133
-Lazy Bear,3416 19th St,San Francisco,CA,94110
-Beretta,1199 Valencia St,San Francisco,CA,94110
-State Bird Provisions,1529 Fillmore St,San Francisco,CA,94115
-The Morris,2501 Mariposa St,San Francisco,CA,94110
-Mignonette Downtown,210 NE 18th St,Miami,FL,33132
-Amara at Paraiso,3101 NE 7th Ave,Miami,FL,33137
-KOMODO Restaurant,801 Brickell Ave,Miami,FL,33131
-CVI.CHE 105 Downtown,105 NE 3rd Ave,Miami,FL,33132
-La Mar by Gaston Acurio,500 Brickell Key Dr,Miami,FL,33131
-Soco Restaurant,629 E Central Blvd,Orlando,FL,32801
-Santiago's Bodega | Orlando,802 Virginia Dr,Orlando,FL,32803
-Kres Chophouse,17 W Church St,Orlando,FL,32801
-Reyes Mezcaleria,821 N Orange Ave,Orlando,FL,32801
-Maxine's On Shine,337 Shine Ave,Orlando,FL,32803
-The Boulder Cork,3295 30th St,Boulder,CO,80301
-Oak,1400 Pearl St,Boulder,CO,80302
-The Buff,2600 Canyon Blvd,Boulder,CO,80302
-Basta,3601 Arapahoe Ave,Boulder,CO,80303
-SALT,1047 Pearl St,Boulder,CO,80302
-Carelli's,645 30th St,Boulder,CO,80303
-River and Woods,2328 Pearl St,Boulder,CO,80302
-Roadhouse Boulder Depot,2366 Junction Pl,Boulder,CO,80301
-Root Down,1600 W 33rd Ave,Denver,CO,80211
-Rioja,1431 Larimer St,Denver,CO,80202
-El Five,2930 Umatilla St Unit #500,Denver,CO,80211
-Corinne Restaurant,1455 California St,Denver,CO,80202
-ChoLon - Downtown,1555 Blake St #101,Denver,CO,80202
-Tavernetta,1889 16th St Mall,Denver,CO,80202
-Beckon,2843 Larimer St,Denver,CO,80205
-The Bindery,1817 Central St,Denver,CO,80211
-Il Posto,2601 Larimer St,Denver,CO,80205
-Avelina,1550 17th St,Denver,CO,80202
-Fruition Restaurant,1313 E 6th Ave,Denver,CO,80218
-Maynards,400 N Toole Ave,Tucson,AZ,85701
-HUB Restaurant & Ice Creamery,266 E Congress St,Tucson,AZ,85701
-Tito and Pep,4122 E Speedway Blvd,Tucson,AZ,85712
-Cielos,306 N Alvernon Way,Tucson,AZ,85711
-OBON Sushi Bar Ramen,350 E Congress St,Tucson,AZ,85701
-Nook,1 E Congress St,Tucson,AZ,85701
-Pastiche Modern Eatery,3025 N Campbell Ave Suite 121,Tucson,AZ,85719
-LaCo Tucson | Outdoor Downtown Tucson Restaurant,201 N Court Ave,Tucson,AZ,85701
-The Shed Restaurant,113 1/2 E Palace Ave,Santa Fe,NM,87501
-Casa Chimayo Restaurant,409 W Water St,Santa Fe,NM,87501
-Mucho Gusto,839 Paseo De Peralta,Santa Fe,NM,87501
-Cafe Pasqual's,121 Don Gaspar Ave,Santa Fe,NM,87501
-La Choza Restaurant,905 Alarid St,Santa Fe,NM,87505
-Maria's New Mexican Kitchen,555 W Cordova Rd,Santa Fe,NM,87505
-Charleston's Restaurant,2000 S Meridian Ave,Oklahoma City,OK,73108
-Cheever's Cafe,2409 N Hudson Ave,Oklahoma City,OK,73103
-Kitchen No. 324,324 N Robinson Ave,Oklahoma City,OK,73102
-The Manhattan OKC,210 Park Ave Suite 150,Oklahoma City,OK,73102
-Patrono,305 N Walker Ave,Oklahoma City,OK,73102
-The Melting Pot,4 E Sheridan Ave,Oklahoma City,OK,73104
-Swingin' Door Exchange,219 E Michigan St,Milwaukee,WI,53202
-Calderone Club - Downtown Milwaukee,842 N Old World 3rd St,Milwaukee,WI,53203
-Mader's Restaurant,1041 N Old World 3rd St,Milwaukee,WI,53203
-Zarletti,741 N Milwaukee St,Milwaukee,WI,53202
-Rodizio Grill Milwaukee | Brazilian Steakhouse Restaurant,777 N Water St,Milwaukee,WI,53202
-AJ Bombers,1247 N Water St,Milwaukee,WI,53202
-Sanford,1547 N Jackson St,Milwaukee,WI,53202
-Birch,459 E Pleasant St,Milwaukee,WI,53202
-Harry & Izzy's,153 S Illinois St,Indianapolis,IN,46225
-Mesh,725 Massachusetts Ave,Indianapolis,IN,46204
-Root & Bone - Indianapolis,4601 N College Ave,Indianapolis,IN,46205
-The Eagle,310 Massachusetts Ave,Indianapolis,IN,46204
-Tony's of Indianapolis,110 W Washington St,Indianapolis,IN,46204
-Fogo de Chão Brazilian Steakhouse,117 Washington St,Indianapolis,IN,46204
-Founding Farmers DC,1924 Pennsylvania Avenue NW,Washington,DC,20006
-Estadio,1520 14th St NW,Washington,DC,20005
-Old Ebbitt Grill,675 15th St NW,Washington,DC,20005
-The Dabney,122 Blagden Alley NW,Washington,DC,20001
-SUCCOTASH,915 F St NW,Washington,DC,20004
-Ambar Capitol Hill,523 8th St SE,Washington,DC,20003
-Fête,2 N Hotel St,Honolulu,HI,96817
-PAI Honolulu,55 Merchant St #110,Honolulu,HI,96813
-Moku Kitchen,660 Ala Moana Blvd,Honolulu,HI,96813
-Hula Grill Waikiki,2335 Kalakaua Ave,Honolulu,HI,96815
-The Pig and The Lady,83 N King St,Honolulu,HI,96817
-Senia,75 N King St,Honolulu,HI,96817
-Ginger,425 W 5th Ave,Anchorage,AK,99501
-Pangea Restaurant And Lounge,508 W 6th Ave,Anchorage,AK,99501
-Glacier Brewhouse,737 W 5th Ave #110,Anchorage,AK,99501
-Simon & Seafort's Saloon & Grill,420 L St,Anchorage,AK,99501
-Jens' Restaurant,701 W 36th Ave,Anchorage,AK,99503
-Hemenway's Restaurant,121 S Main St,Providence,RI,2903
-nicks on broadway,500 Broadway,Providence,RI,2909
-Los Andes,903 Chalkstone Ave,Providence,RI,2908
-Andino's Italian Restaurant,171 Atwells Ave,Providence,RI,2903
-Gracie's,194 Washington St,Providence,RI,2903
-Oleana,134 Hampshire St,Cambridge,MA,2139
-Gibbet Hill Grill,61 Lowell Rd,Groton,MA,1450
-J's Restaurant At the Winery,100 Wattaquadock Hill Rd,Bolton,MA,1740
-The Chateau Restaurant Norton,48 Bay Rd,Norton,MA,2766
-1606 Restaurant & Oyster Bar,55 Commercial St,Gloucester,MA,1930
-Herons,100 Woodland Pond Dr,Cary,NC,27513
-River's End Restaurant,13077 US-19,Bryson City,NC,28713
-Heirloom,33 Glenway St,Belmont,NC,28012
-The Fearrington House Restaurant,230 Market St,Pittsboro,NC,27312
-Havana’s Restaurant,1 N Lake Park Blvd,Carolina Beach,NC,28428
-NC Coast Grill & Bar,1184 Duck Rd,Duck,NC,27949
-Pirogue Grille,121 N 4th St,Bismarck,ND,58501
-Mezzaluna,309 Roberts St N,Fargo,ND,58102
-Space Aliens Grill & Bar,1304 E Century Ave,Bismarck,ND,58503
-The Toasted Frog,305 Broadway N,Fargo,ND,58102
-Walrus Restaurant,1136 N 3rd St,Bismarck,ND,58501
-Ranch Steakhouse,1119 ND-20,Devils Lake,ND,58301
-Theodore's Dining Room,301 3rd Ave,Medora,ND,58645
-Würst Bier Hall,630 1st Ave N,Fargo,ND,58102
-Cola's Restaurant,1215 Assembly St,Columbia,SC,29201
-Charleston Grill,224 King St,Charleston,SC,29401
-Florence's Lowcountry Kitchen,90 Folly Rd Blvd Suite B-4,Charleston,SC,29407
-Terra,100 State St,West Columbia,SC,29169
-Blue Marlin,1200 Lincoln St,Columbia,SC,29201
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+Name^Address^City^State^Zip
+Chili's Grill & Bar^11555 Dallas Pkwy^Frisco^TX^75034
+Lazy Dog Restaurant & Bar^8401 Preston Rd^Plano^TX^75024
+The Community Grill^2525 Main St #400^Frisco^TX^75034
+Maple Street Biscuit Company Frisco^3288 Main St #111^Frisco^TX^75034
+54th Street Restaurant & Drafthouse-Frisco^9449 Dallas Pkwy^Frisco^TX^75033
+Mario's Mexican & Salvadorian Restaurant^2831 Eldorado Pkwy #112^Little Elm^TX^75068
+Eggsellent Cafe^12388 FM 423^Frisco^TX^75033
+Frisco Diner^9250 Dallas Pkwy^Frisco^TX^75033
+Applebee's Grill + Bar^2672 FM 423^Little Elm^TX^75068
+Uncork'd Bar & Grill Frisco^615 Main St Suite 100^Frisco^TX^75034
+Bar Siena^832 W Randolph St^Chicago^IL^60607
+Barrio^65 W Kinzie St^Chicago^IL^60654
+Girl & The Goat^809 W Randolph St^Chicago^IL^60607
+Virtue Restaurant^1462 E 53rd St^Chicago^IL^60615
+Boka^1729 N Halsted St^Chicago^IL^60614
+The Purple Pig Restaurant^444 Michigan Ave^Chicago^IL^60611
+Quality Bistro^120 W 55th St^New York^NY^10019
+Scarpetta^88 Madison Ave^New York^NY^10016
+Orsay^1057 Lexington Ave^New York^NY^10021
+Gabriel Kreuther^41 W 42nd St^New York^NY^10036
+1803 NYC^82 Reade St^New York^NY^10007
+ilili Restaurant NYC^236 5th Ave^New York^NY^10001
+Marea^240 Central Park S^New York^NY^10019
+Le Coucou^138 Lafayette St^New York^NY^10013
+Boucherie Union Square^225 Park Ave S^New York^NY^10003
+Lazy Dog Restaurant & Bar^3525 W Carson St^Torrance^CA^90503
+La Unica Taqueria & Restaurant^6942 Pecan St^Frisco^TX^75034
+République Café Bakery & République Restaurant^624 S La Brea Ave^Los Angeles^CA^90036
+Perch^448 S Hill St^Los Angeles^CA^90013
+Bavel^500 Mateo St^Los Angeles^CA^90013
+71Above^633 W 5th St 71st floor^Los Angeles^CA^90071
+Majordomo^1725 Naud St^Los Angeles^CA^90012
+Bestia^2121 E 7th Pl^Los Angeles^CA^90021
+Redbird^114 E 2nd St^Los Angeles^CA^90012
+The Factory Kitchen^1300 Factory Pl^Los Angeles^CA^90013
+Water Grill San Diego^615 J St^San Diego^CA^92101
+Searsucker San Diego^611 Fifth Ave^San Diego^CA^92101
+Top of the Market - San Diego^750 N Harbor Dr^San Diego^CA^92101
+Born and Raised^1909 India St^San Diego^CA^92101
+Mister A's^2550 Fifth Ave 12th floor^San Diego^CA^92103
+Ironside Fish & Oyster^1654 India St^San Diego^CA^92101
+North Italia^2301 N Akard St Suite 280^Dallas^TX^75201
+Toulouse^3314 Knox St^Dallas^TX^75205
+Meso Maya Comida y Copas^1611 McKinney Ave^Dallas^TX^75202
+Al Biernat's^4217 Oak Lawn Ave^Dallas^TX^75219
+Yardbird Table & Bar^2121 N Pearl St St 170^Dallas^TX^75201
+Doc B's^2021 McKinney Ave #190^Dallas^TX^75201
+Kenny's Wood Fired Grill^5000 Belt Line Rd #775^Dallas^TX^75254
+Iron Cactus Mexican Restaurant and Margarita Bar^200 River Walk Suite 100^San Antonio^TX^78205
+Boudro's on the Riverwalk^"On The Riverwalk Level, 421 E Commerce St"^San Antonio^TX^78205
+Paesanos Riverwalk^111 W Crockett St #101^San Antonio^TX^78205
+Iron Cactus Mexican Restaurant and Margarita Bar^200 River Walk Suite 100^San Antonio^TX^78205
+Bier Garten Riverwalk^126 Losoya St^San Antonio^TX^78205
+Biga on the Banks - San Antonio Riverwalk Restaurant^203 S St Mary's St^San Antonio^TX^78205
+The Republic of Texas Restaurant^526 River Walk St^San Antonio^TX^78205
+Vic & Anthony's Steakhouse^1510 Texas Ave^Houston^TX^77002
+State of Grace^3258 Westheimer Rd^Houston^TX^77098
+Riel^1927 Fairview St^Houston^TX^77019
+Brennan's of Houston^3300 Smith St^Houston^TX^77006
+RA Sushi Bar Restaurant^117 W 4th St STE 300^Austin^TX^78701
+Hestia^607 W 3rd St Suite 105^Austin^TX^78701
+Launderette^2115 Holly St^Austin^TX^78702
+ATX Cocina^110 San Antonio St #170^Austin^TX^78701
+Odd Duck^1201 S Lamar Blvd^Austin^TX^78704
+South City Kitchen Buckhead^3350 Peachtree Rd NE Suite 175^Atlanta^GA^30326
+Poor Calvin's^510 Piedmont Ave NE^Atlanta^GA^30308
+Bones Restaurant^3130 Piedmont Rd NE^Atlanta^GA^30305
+Ecco Midtown^40 7th St NE^Atlanta^GA^30308
+TWO urban licks^820 Ralph McGill Blvd NE^Atlanta^GA^30306
+The Vortex^438 Moreland Ave NE^Atlanta^GA^30307
+Ray's In the City^240 Peachtree St^Atlanta^GA^30303
+Cochon Restaurant^930 Tchoupitoulas St suite a^New Orleans^LA^70130
+GW Fins^808 Bienville St^New Orleans^LA^70112
+Commander's Palace^1403 Washington Ave^New Orleans^LA^70130
+Arnaud's^813 Bienville St^New Orleans^LA^70112
+Brennan's^417 Royal St^New Orleans^LA^70130
+Olde Nola Cookery^205 Bourbon St^New Orleans^LA^70130
+The Pink Door^1919 Post Alley^Seattle^WA^98101
+Shaker + Spear^2000 2nd Ave^Seattle^WA^98121
+Canlis^2576 Aurora Ave N^Seattle^WA^98109
+Spinasse^1531 14th Ave^Seattle^WA^98122
+Le Pichet^1933 1st Ave^Seattle^WA^98101
+The Capital Grille^1301 4th Ave^Seattle^WA^98101
+Sotto Mare^552 Green St^San Francisco^CA^94133
+Delancey Street Restaurant^600 The Embarcadero^San Francisco^CA^94107
+Cotogna^490 Pacific Ave^San Francisco^CA^94133
+Lazy Bear^3416 19th St^San Francisco^CA^94110
+Beretta^1199 Valencia St^San Francisco^CA^94110
+State Bird Provisions^1529 Fillmore St^San Francisco^CA^94115
+The Morris^2501 Mariposa St^San Francisco^CA^94110
+Mignonette Downtown^210 NE 18th St^Miami^FL^33132
+Amara at Paraiso^3101 NE 7th Ave^Miami^FL^33137
+KOMODO Restaurant^801 Brickell Ave^Miami^FL^33131
+CVI.CHE 105 Downtown^105 NE 3rd Ave^Miami^FL^33132
+La Mar by Gaston Acurio^500 Brickell Key Dr^Miami^FL^33131
+Soco Restaurant^629 E Central Blvd^Orlando^FL^32801
+Santiago's Bodega | Orlando^802 Virginia Dr^Orlando^FL^32803
+Kres Chophouse^17 W Church St^Orlando^FL^32801
+Reyes Mezcaleria^821 N Orange Ave^Orlando^FL^32801
+Maxine's On Shine^337 Shine Ave^Orlando^FL^32803
+The Boulder Cork^3295 30th St^Boulder^CO^80301
+Oak^1400 Pearl St^Boulder^CO^80302
+The Buff^2600 Canyon Blvd^Boulder^CO^80302
+Basta^3601 Arapahoe Ave^Boulder^CO^80303
+SALT^1047 Pearl St^Boulder^CO^80302
+Carelli's^645 30th St^Boulder^CO^80303
+River and Woods^2328 Pearl St^Boulder^CO^80302
+Roadhouse Boulder Depot^2366 Junction Pl^Boulder^CO^80301
+Root Down^1600 W 33rd Ave^Denver^CO^80211
+Rioja^1431 Larimer St^Denver^CO^80202
+El Five^2930 Umatilla St Unit #500^Denver^CO^80211
+Corinne Restaurant^1455 California St^Denver^CO^80202
+ChoLon - Downtown^1555 Blake St #101^Denver^CO^80202
+Tavernetta^1889 16th St Mall^Denver^CO^80202
+Beckon^2843 Larimer St^Denver^CO^80205
+The Bindery^1817 Central St^Denver^CO^80211
+Il Posto^2601 Larimer St^Denver^CO^80205
+Avelina^1550 17th St^Denver^CO^80202
+Fruition Restaurant^1313 E 6th Ave^Denver^CO^80218
+Maynards^400 N Toole Ave^Tucson^AZ^85701
+HUB Restaurant & Ice Creamery^266 E Congress St^Tucson^AZ^85701
+Tito and Pep^4122 E Speedway Blvd^Tucson^AZ^85712
+Cielos^306 N Alvernon Way^Tucson^AZ^85711
+OBON Sushi Bar Ramen^350 E Congress St^Tucson^AZ^85701
+Nook^1 E Congress St^Tucson^AZ^85701
+Pastiche Modern Eatery^3025 N Campbell Ave Suite 121^Tucson^AZ^85719
+LaCo Tucson | Outdoor Downtown Tucson Restaurant^201 N Court Ave^Tucson^AZ^85701
+The Shed Restaurant^113 1/2 E Palace Ave^Santa Fe^NM^87501
+Casa Chimayo Restaurant^409 W Water St^Santa Fe^NM^87501
+Mucho Gusto^839 Paseo De Peralta^Santa Fe^NM^87501
+Cafe Pasqual's^121 Don Gaspar Ave^Santa Fe^NM^87501
+La Choza Restaurant^905 Alarid St^Santa Fe^NM^87505
+Maria's New Mexican Kitchen^555 W Cordova Rd^Santa Fe^NM^87505
+Charleston's Restaurant^2000 S Meridian Ave^Oklahoma City^OK^73108
+Cheever's Cafe^2409 N Hudson Ave^Oklahoma City^OK^73103
+Kitchen No. 324^324 N Robinson Ave^Oklahoma City^OK^73102
+The Manhattan OKC^210 Park Ave Suite 150^Oklahoma City^OK^73102
+Patrono^305 N Walker Ave^Oklahoma City^OK^73102
+The Melting Pot^4 E Sheridan Ave^Oklahoma City^OK^73104
+Swingin' Door Exchange^219 E Michigan St^Milwaukee^WI^53202
+Calderone Club - Downtown Milwaukee^842 N Old World 3rd St^Milwaukee^WI^53203
+Mader's Restaurant^1041 N Old World 3rd St^Milwaukee^WI^53203
+Zarletti^741 N Milwaukee St^Milwaukee^WI^53202
+Rodizio Grill Milwaukee | Brazilian Steakhouse Restaurant^777 N Water St^Milwaukee^WI^53202
+AJ Bombers^1247 N Water St^Milwaukee^WI^53202
+Sanford^1547 N Jackson St^Milwaukee^WI^53202
+Birch^459 E Pleasant St^Milwaukee^WI^53202
+Harry & Izzy's^153 S Illinois St^Indianapolis^IN^46225
+Mesh^725 Massachusetts Ave^Indianapolis^IN^46204
+Root & Bone - Indianapolis^4601 N College Ave^Indianapolis^IN^46205
+The Eagle^310 Massachusetts Ave^Indianapolis^IN^46204
+Tony's of Indianapolis^110 W Washington St^Indianapolis^IN^46204
+Fogo de Chão Brazilian Steakhouse^117 Washington St^Indianapolis^IN^46204
+Founding Farmers DC^1924 Pennsylvania Avenue NW^Washington^DC^20006
+Estadio^1520 14th St NW^Washington^DC^20005
+Old Ebbitt Grill^675 15th St NW^Washington^DC^20005
+The Dabney^122 Blagden Alley NW^Washington^DC^20001
+SUCCOTASH^915 F St NW^Washington^DC^20004
+Ambar Capitol Hill^523 8th St SE^Washington^DC^20003
+Féte^2 N Hotel St^Honolulu^HI^96817
+PAI Honolulu^55 Merchant St #110^Honolulu^HI^96813
+Moku Kitchen^660 Ala Moana Blvd^Honolulu^HI^96813
+Hula Grill Waikiki^2335 Kalakaua Ave^Honolulu^HI^96815
+The Pig and The Lady^83 N King St^Honolulu^HI^96817
+Senia^75 N King St^Honolulu^HI^96817
+Ginger^425 W 5th Ave^Anchorage^AK^99501
+Pangea Restaurant And Lounge^508 W 6th Ave^Anchorage^AK^99501
+Glacier Brewhouse^737 W 5th Ave #110^Anchorage^AK^99501
+Simon & Seafort's Saloon & Grill^420 L St^Anchorage^AK^99501
+Jens' Restaurant^701 W 36th Ave^Anchorage^AK^99503
+Hemenway's Restaurant^121 S Main St^Providence^RI^2903
+nicks on broadway^500 Broadway^Providence^RI^2909
+Los Andes^903 Chalkstone Ave^Providence^RI^2908
+Andino's Italian Restaurant^171 Atwells Ave^Providence^RI^2903
+Gracie's^194 Washington St^Providence^RI^2903
+Oleana^134 Hampshire St^Cambridge^MA^2139
+Gibbet Hill Grill^61 Lowell Rd^Groton^MA^1450
+J's Restaurant At the Winery^100 Wattaquadock Hill Rd^Bolton^MA^1740
+The Chateau Restaurant Norton^48 Bay Rd^Norton^MA^2766
+1606 Restaurant & Oyster Bar^55 Commercial St^Gloucester^MA^1930
+Herons^100 Woodland Pond Dr^Cary^NC^27513
+River's End Restaurant^13077 US-19^Bryson City^NC^28713
+Heirloom^33 Glenway St^Belmont^NC^28012
+The Fearrington House Restaurant^230 Market St^Pittsboro^NC^27312
+Havana's Restaurant^1 N Lake Park Blvd^Carolina Beach^NC^28428
+NC Coast Grill & Bar^1184 Duck Rd^Duck^NC^27949
+Pirogue Grille^121 N 4th St^Bismarck^ND^58501
+Mezzaluna^309 Roberts St N^Fargo^ND^58102
+Space Aliens Grill & Bar^1304 E Century Ave^Bismarck^ND^58503
+The Toasted Frog^305 Broadway N^Fargo^ND^58102
+Walrus Restaurant^1136 N 3rd St^Bismarck^ND^58501
+Ranch Steakhouse^1119 ND-20^Devils Lake^ND^58301
+Theodore's Dining Room^301 3rd Ave^Medora^ND^58645
+Würst Bier Hall^630 1st Ave N^Fargo^ND^58102
+Cola's Restaurant^1215 Assembly St^Columbia^SC^29201
+Charleston Grill^224 King St^Charleston^SC^29401
+Florence's Lowcountry Kitchen^90 Folly Rd Blvd Suite B-4^Charleston^SC^29407
+Terra^100 State St^West Columbia^SC^29169
+Blue Marlin^1200 Lincoln St^Columbia^SC^29201
