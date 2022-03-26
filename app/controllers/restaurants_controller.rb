@@ -46,6 +46,7 @@ class RestaurantsController < ApplicationController
     self.set_restaurants(list)
     @radio_checked_name = "checked"
     @display_div_name = "display: block;"
+    @search_made = false
   end
 
   # GET /restaurants/1 or /restaurants/1.json

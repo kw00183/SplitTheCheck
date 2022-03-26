@@ -31,7 +31,7 @@
 </div>
 <div class="State search" style="<%= @display_div_state %>">
   <form action="/search">
-    <%= select_tag :state, options_for_select(us_states, params[:state]) %>
+    <%= select_tag :state, options_for_select(us_states, params[:state]), :required => true %>
     <button type="submit">Search</button>
   </form>
 </div>

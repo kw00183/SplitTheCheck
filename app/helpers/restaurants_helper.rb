@@ -1,6 +1,7 @@
 module RestaurantsHelper
   def us_states
     [
+    ['Select', nil],
     ['AK', 'AK'],
     ['AL', 'AL'],
     ['AR', 'AR'],
