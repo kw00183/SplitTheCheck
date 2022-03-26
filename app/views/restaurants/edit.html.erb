@@ -1,6 +1,7 @@
-<h1>Editing Restaurant</h1>
+<h3>Edit Restaurant</h3>
 
 <%= render 'form', restaurant: @restaurant %>
 
-<%= link_to 'Show', @restaurant %> |
-<%= link_to 'Back', restaurants_path %>
+<span>
+  <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>
+</span>

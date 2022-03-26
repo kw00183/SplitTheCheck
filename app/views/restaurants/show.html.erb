@@ -1,39 +1,33 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
 
 <p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
+  <strong><%= @restaurant.name %></strong>
 </p>
 
 <p>
-  <strong>Address:</strong>
   <%= @restaurant.address %>
 </p>
 
 <p>
-  <strong>City:</strong>
-  <%= @restaurant.city %>
+  <%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zip %>
 </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @restaurant.state %>
-</p>
+<br>
 
 <p>
-  <strong>Zip:</strong>
-  <%= @restaurant.zip %>
-</p>
-
-<p>
-  <strong>Will split count:</strong>
+  <strong>Will Split:</strong>
   <%= @restaurant.will_split_count %>
 </p>
 
 <p>
-  <strong>Wont split count:</strong>
+  <strong>Won't Split:</strong>
   <%= @restaurant.wont_split_count %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<br>
+<div>
+  <%= button_to 'Edit', edit_restaurant_path(@restaurant), :method => :get, class: "floated" %>
+  <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>
+</div>

@@ -12,31 +12,32 @@
   <% end %>
 
   <div class="field">
-    <p>Restaurant Name (required)</p>
+    <p>Name (required)</p>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <p>Restaurant Address (required)</p>
+    <p>Address (required)</p>
     <%= form.text_field :address %>
   </div>
 
   <div class="field">
-    <p>Restaurant City (required)</p>
+    <p>City (required)</p>
     <%= form.text_field :city %>
   </div>
 
   <div class="field">
-    <p>Restaurant State (required)</p>
+    <p>State (required)</p>
     <%= form.select :state, options_for_select(us_states, :selected => form.object.state) %>
   </div>
 
   <div class="field">
-    <p>Restaurant Zip (required)</p>
+    <p>Zip (required)</p>
     <%= form.text_field :zip %>
   </div>
 
-  <div class="actions">
+  <br>
+  <span class="actions floated">
     <%= form.submit %>
-  </div>
+  </span>
 <% end %>

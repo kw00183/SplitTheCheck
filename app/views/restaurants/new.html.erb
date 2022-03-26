@@ -1,5 +1,7 @@
-<h1>New Restaurant</h1>
+<h3>Add Restaurant</h3>
 
 <%= render 'form', restaurant: @restaurant %>
 
-<%= link_to 'Back', restaurants_path %>
+<span class="floated">
+  <%= button_to 'Cancel', restaurants_path, :method => :get%>
+</span>
