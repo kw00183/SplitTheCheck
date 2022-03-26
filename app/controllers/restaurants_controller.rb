@@ -2,15 +2,11 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: %i[ show edit update destroy ]
 
   def inititialize
-    list = Restaurant.where(name: [nil, ""])
-    self.set_restaurants(list)
-    @radio_checked_name = "checked"
+    self.clear_restaurants_list
   end
 
   # GET /restaurants or /restaurants.json
   def index
-    self.reset_radio
-
     if params[:name].blank? == false
       list = Restaurant.where("name LIKE ?", "%" + params[:name] + "%")
       self.set_restaurants(list)
@@ -37,26 +33,16 @@ class RestaurantsController < ApplicationController
       @radio_checked_zip = "checked"
       @display_div_zip = "display: block;"
     else
-      list = Restaurant.where(name: [nil, ""])
-      self.set_restaurants(list)
-      @radio_checked_name = "checked"
-      @display_div_name = "display: block;"
+      self.clear_restaurants_list
     end
     self.get_restaurants
   end
 
-  def reset_radio
-    @radio_checked_name = ""
-    @radio_checked_address = ""
-    @radio_checked_city = ""
-    @radio_checked_state = ""
-    @radio_checked_zip = ""
-
-    @display_div_name = "display: none;"
-    @display_div_address = "display: none;"
-    @display_div_city = "display: none;"
-    @display_div_state = "display: none;"
-    @display_div_zip = "display: none;"
+  def clear_restaurants_list
+    list = Restaurant.where(name: [nil, ""])
+    self.set_restaurants(list)
+    @radio_checked_name = "checked"
+    @display_div_name = "display: block;"
   end
 
   # GET /restaurants/1 or /restaurants/1.json

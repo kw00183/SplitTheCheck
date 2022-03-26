@@ -13,19 +13,19 @@
 </div>
 <div class="Name search" style="<%= @display_div_name %>">
   <form action="/search">
-    <input type="text" name="name" placeholder="Name" value="<%= params[:name] %>">
+    <input type="text" name="name" placeholder="Name" required="true" value="<%= params[:name] %>">
     <button type="submit">Search</button>
   </form>
 </div>
 <div class="Address search" style="<%= @display_div_address %>">
   <form action="/search">
-    <input type="text" name="address" placeholder="Address" value="<%= params[:address] %>">
+    <input type="text" name="address" placeholder="Address" required="true" value="<%= params[:address] %>">
     <button type="submit">Search</button>
   </form>
 </div>
 <div class="City search" style="<%= @display_div_city %>">
   <form action="/search">
-    <input type="text" name="city" placeholder="City" value="<%= params[:city] %>">
+    <input type="text" name="city" placeholder="City" required="true" value="<%= params[:city] %>">
     <button type="submit">Search</button>
   </form>
 </div>
@@ -37,7 +37,7 @@
 </div>
 <div class="Zip search" style="<%= @display_div_zip %>">
   <form action="/search">
-    <input type="text" name="zip" placeholder="Zip" value="<%= params[:zip] %>">
+    <input type="text" name="zip" placeholder="Zip" required="true" value="<%= params[:zip] %>">
     <button type="submit">Search</button>
   </form>
 </div>
@@ -90,6 +90,6 @@
 <% else %>
 
 <br>
-
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<h3>Didn't find the restaurant?</h3>
+<%= button_to 'Add Restaurant', new_restaurant_path %>
 <% end %>
