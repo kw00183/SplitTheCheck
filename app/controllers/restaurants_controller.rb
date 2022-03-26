@@ -3,10 +3,12 @@ class RestaurantsController < ApplicationController
 
   def inititialize
     self.clear_restaurants_list
+    @search_made = false
   end
 
   # GET /restaurants or /restaurants.json
   def index
+    @search_made = true
     if params[:name].blank? == false
       list = Restaurant.where("name LIKE ?", "%" + params[:name] + "%")
       self.set_restaurants(list)

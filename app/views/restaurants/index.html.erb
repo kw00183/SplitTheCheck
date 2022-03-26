@@ -86,10 +86,12 @@
     <% end %>
   </tbody>
 </table>
+<% end %>
 
-<% else %>
-
+<% if @restaurants.blank? == true && @search_made == true %>
 <br>
+<hr>
+
 <h3>Didn't find the restaurant?</h3>
 <%= button_to 'Add Restaurant', new_restaurant_path %>
 <% end %>
