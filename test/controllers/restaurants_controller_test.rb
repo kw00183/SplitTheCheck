@@ -5,18 +5,30 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
     @restaurant = restaurants(:fix_1)
   end
 
-  test "should get by name" do
-    get restaurants_url
+  test "should get vote page" do
+    get vote_path(@restaurant)
+    assert_response :success
+    assert_select "h3", text: "Vote on Splitting: Will or Won't They"
+  end
 
-    get "/search?name=" + "Hotel_3"
+  test "should return add when no restaurant" do
+    get restaurants_url
+    get "/search?name=" + "Name_0"
 
     assert_response :success
-    assert_select "td#restaurant_name", text: "Hotel_3"
+    assert_select "h3#not_found", text: "Didn't find the restaurant?"
+  end
+
+  test "should get by name" do
+    get restaurants_url
+    get "/search?name=" + "Name_3"
+
+    assert_response :success
+    assert_select "td#restaurant_name", text: "Name_3"
   end
 
   test "should get by address" do
     get restaurants_url
-
     get "/search?address=" + "Address_3"
 
     assert_response :success
@@ -25,7 +37,6 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get by city" do
     get restaurants_url
-
     get "/search?city=" + "City_3"
 
     assert_response :success
@@ -34,20 +45,88 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get by state" do
     get restaurants_url
-
-    get "/search?state=" + "State_3"
+    get "/search?state=" + "TX"
 
     assert_response :success
-    assert_select "td#restaurant_state", text: "State_3"
+    assert_select "td#restaurant_state", text: "TX"
   end
 
   test "should get by zip" do
     get restaurants_url
-
     get "/search?zip=" + "Zip_3"
 
     assert_response :success
     assert_select "td#restaurant_zip", text: "Zip_3"
+  end
+
+  test "should vote will 1 time" do
+    get restaurants_url
+    get "/search?name=" + "Name_3"
+
+    assert_response :success
+    assert_select "td#restaurant_name", text: "Name_3"
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=will%203'
+
+    get "/restaurants/3/vote"
+
+    assert_response :success
+    assert_select "p#will", text: "Will Split: 1 vote"
+  end
+
+  test "should vote will Multi times" do
+    get restaurants_url
+    get "/search?name=" + "Name_3"
+
+    assert_response :success
+    assert_select "td#restaurant_name", text: "Name_3"
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=will%203'
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=will%203'
+
+    get "/restaurants/3/vote"
+
+    assert_response :success
+    assert_select "p#will", text: "Will Split: 2 votes"
+  end
+
+  test "should vote wont 1 time" do
+    get restaurants_url
+    get "/search?name=" + "Name_3"
+
+    assert_response :success
+    assert_select "td#restaurant_name", text: "Name_3"
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=wont%203'
+
+    get "/restaurants/3/vote"
+
+    assert_response :success
+    assert_select "p#wont", text: "Won't Split: 1 vote"
+  end
+
+  test "should vote wont Multi times" do
+    get restaurants_url
+    get "/search?name=" + "Name_3"
+
+    assert_response :success
+    assert_select "td#restaurant_name", text: "Name_3"
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=wont%203'
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=wont%203'
+
+    get "/restaurants/3/vote"
+
+    assert_response :success
+    assert_select "p#wont", text: "Won't Split: 2 votes"
   end
 
   test "should get index" do

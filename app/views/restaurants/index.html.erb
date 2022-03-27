@@ -5,11 +5,11 @@
 <h3>Search for Restaurants by:</h3>
 
 <div>
-  <label class="search_radio_label"><input type="radio" name="search_radio" value="Name" <%= @radio_checked_name %>> Name</label>
-  <label class="search_radio_label"><input type="radio" name="search_radio" value="Address" <%= @radio_checked_address %>> Address</label>
-  <label class="search_radio_label"><input type="radio" name="search_radio" value="City" <%= @radio_checked_city %>> City</label>
-  <label class="search_radio_label"><input type="radio" name="search_radio" value="State" <%= @radio_checked_state %>> State</label>
-  <label class="search_radio_label"><input type="radio" name="search_radio" value="Zip" <%= @radio_checked_zip %>> Zip</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" id="radio_name" value="Name" <%= @radio_checked_name %>> Name</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" id="radio_address" value="Address" <%= @radio_checked_address %>> Address</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" id="radio_city" value="City" <%= @radio_checked_city %>> City</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" id="radio_state" value="State" <%= @radio_checked_state %>> State</label>
+  <label class="search_radio_label"><input type="radio" name="search_radio" id="radio_zip" value="Zip" <%= @radio_checked_zip %>> Zip</label>
 </div>
 <div class="Name search" style="<%= @display_div_name %>">
   <form action="/search">
@@ -93,6 +93,6 @@
 <br>
 <hr>
 
-<h3>Didn't find the restaurant?</h3>
+<h3 id="not_found">Didn't find the restaurant?</h3>
 <%= button_to 'Add Restaurant', new_restaurant_path, :method => :get %>
 <% end %>

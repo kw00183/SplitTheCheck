@@ -18,14 +18,12 @@
 
 <br>
 
-<p>
-  <strong>Will Split:</strong>
-  <%= @restaurant.will_split_count %> votes
+<p id="will">
+  <strong>Will Split:</strong> <%= @restaurant.will_split_count %> <% if @restaurant.will_split_count == 1 %>vote<% else %>votes<% end %>
 </p>
 
-<p>
-  <strong>Won't Split:</strong>
-  <%= @restaurant.wont_split_count %> votes
+<p id="wont">
+  <strong>Won't Split:</strong> <%= @restaurant.wont_split_count %> <% if @restaurant.wont_split_count == 1 %>vote<% else %>votes<% end %>
 </p>
 
 <br>
