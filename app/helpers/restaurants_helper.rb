@@ -1,4 +1,5 @@
 module RestaurantsHelper
+  # populate states
   def us_states
     [
     ['Select', nil],

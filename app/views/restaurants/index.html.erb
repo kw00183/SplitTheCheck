@@ -13,19 +13,19 @@
 </div>
 <div class="Name search" style="<%= @display_div_name %>">
   <form action="/search">
-    <input type="text" name="name" placeholder="Name" required="true" value="<%= params[:name] %>">
+    <input type="text" id="name" name="name" placeholder="Name" required="true" value="<%= params[:name] %>">
     <button type="submit">Search</button>
   </form>
 </div>
 <div class="Address search" style="<%= @display_div_address %>">
   <form action="/search">
-    <input type="text" name="address" placeholder="Address" required="true" value="<%= params[:address] %>">
+    <input type="text" id="address" name="address" placeholder="Address" required="true" value="<%= params[:address] %>">
     <button type="submit">Search</button>
   </form>
 </div>
 <div class="City search" style="<%= @display_div_city %>">
   <form action="/search">
-    <input type="text" name="city" placeholder="City" required="true" value="<%= params[:city] %>">
+    <input type="text" id="city" name="city" placeholder="City" required="true" value="<%= params[:city] %>">
     <button type="submit">Search</button>
   </form>
 </div>
@@ -37,7 +37,7 @@
 </div>
 <div class="Zip search" style="<%= @display_div_zip %>">
   <form action="/search">
-    <input type="text" name="zip" placeholder="Zip" required="true" value="<%= params[:zip] %>">
+    <input type="text" id="zip" name="zip" placeholder="Zip" required="true" value="<%= params[:zip] %>">
     <button type="submit">Search</button>
   </form>
 </div>
@@ -73,11 +73,11 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.city %></td>
-        <td><%= restaurant.state %></td>
-        <td><%= restaurant.zip %></td>
+        <td id="restaurant_name"><%= restaurant.name %></td>
+        <td id="restaurant_address"><%= restaurant.address %></td>
+        <td id="restaurant_city"><%= restaurant.city %></td>
+        <td id="restaurant_state"><%= restaurant.state %></td>
+        <td id="restaurant_zip"><%= restaurant.zip %></td>
         <td><%= restaurant.will_split_count %></td>
         <td><%= restaurant.wont_split_count %></td>
         <td><%= link_to 'Vote', vote_path(restaurant) %></td>

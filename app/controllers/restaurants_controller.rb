@@ -41,14 +41,6 @@ class RestaurantsController < ApplicationController
     self.get_restaurants
   end
 
-  def clear_restaurants_list
-    list = Restaurant.where(name: [nil, ""])
-    self.set_restaurants(list)
-    @radio_checked_name = "checked"
-    @display_div_name = "display: block;"
-    @search_made = false
-  end
-
   # GET /restaurants/1 or /restaurants/1.json
   def show
   end
@@ -62,21 +54,35 @@ class RestaurantsController < ApplicationController
   def edit
   end
 
+  # clear restaurants
+  def clear_restaurants_list
+    list = Restaurant.where(name: [nil, ""])
+    self.set_restaurants(list)
+    @radio_checked_name = "checked"
+    @display_div_name = "display: block;"
+    @search_made = false
+  end
+
+  # reset session
   def reset_session
     session.clear
   end
 
+  # GET /restaurants
   def get_restaurants
     return @restaurants
   end
 
+  # SET /restaurants
   def set_restaurants(list)
     @restaurants = list
   end
 
+  # GET /restaurants/1/vote
   def vote
   end
 
+  # increment votes
   def submit_vote
     @vote = params[:vote].split[0]
     @restaurant_id = params[:vote].split[1]

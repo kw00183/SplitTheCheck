@@ -1,19 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  address: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  will_split_count: 1
-  wont_split_count: 1
-
-two:
-  name: MyString
-  address: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  will_split_count: 1
-  wont_split_count: 1
+<% 1.upto(200) do |i| %>
+fix_<%= i %>:
+  id: <%= i %>
+  name: Hotel_<%= i %>
+  address: Address_<%= i %>
+  city: City_<%= i %>
+  state: State_<%= i %>
+  zip: Zip_<%= i %>
+<% end %>
