@@ -13,27 +13,27 @@
 
   <div class="field">
     <p>Name (required)</p>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, id: :name %>
   </div>
 
   <div class="field">
     <p>Address (required)</p>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, id: :address %>
   </div>
 
   <div class="field">
     <p>City (required)</p>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, id: :city %>
   </div>
 
   <div class="field">
     <p>State (required)</p>
-    <%= form.select :state, options_for_select(us_states, :selected => form.object.state) %>
+    <%= form.select :state, options_for_select(us_states, :selected => form.object.state), id: "restaurant_state" %>
   </div>
 
   <div class="field">
     <p>Zip (required)</p>
-    <%= form.text_field :zip %>
+    <%= form.text_field :zip, id: :zip %>
   </div>
 
   <br>

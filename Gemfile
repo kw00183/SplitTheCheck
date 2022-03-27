@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'utf8-cleaner'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,6 +47,7 @@ group :development do
 end
 
 group :test do
+  gem 'minitest', '5.14.2'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
