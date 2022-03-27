@@ -75,29 +75,28 @@ class RestaurantsController < ApplicationController
   end
 
   def vote
-    params[:id] = @restaurant.id
   end
 
   def submit_vote
-    param_id = params[:id]
-    puts params[:id].to_s + "sinsinsinsinsinsinsinsinsinsinsins"
+    @vote = params[:vote].split[0]
+    @restaurant_id = params[:vote].split[1]
 
-    @restaurant = Restaurant.find_by(params[:id])
+    #puts @restaurant_id.to_s
 
-    puts params[:id].to_s + "lessssssss"
+    @vote_restaurant = Restaurant.find_by(id: @restaurant_id)
 
-    will_count = @restaurant.will_split_count + 1
-    wont_count = @restaurant.wont_split_count + 1
+    will_count = @vote_restaurant.will_split_count + 1
+    wont_count = @vote_restaurant.wont_split_count + 1
 
-    if params[:vote] == "will"
-      Restaurant.find_by(params[:id]).tap{|restaurant| restaurant.will_split_count = will_count }.save
+    if @vote == "will"
+      @vote_restaurant.update(will_split_count: will_count)
       respond_to do |format|
-        format.html { redirect_to vote_path(@restaurant), notice: "Your vote of will was registered" }
+        format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of will was registered" }
       end
-    elsif params[:vote] == "wont"
-      Restaurant.find_by(params[:id]).tap{|restaurant| restaurant.wont_split_count = wont_count }.save
+    elsif @vote == "wont"
+      @vote_restaurant.update(wont_split_count: wont_count)
       respond_to do |format|
-        format.html { redirect_to vote_path(@restaurant), notice: "Your vote of won't was registered" }
+        format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of won't was registered" }
       end
     end
 
