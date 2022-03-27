@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: %i[ show edit update destroy ]
+  before_action :set_restaurant, only: %i[ show edit update vote ]
 
   def inititialize
     self.clear_restaurants_list
@@ -74,6 +74,28 @@ class RestaurantsController < ApplicationController
     @restaurants = list
   end
 
+  def vote
+  end
+
+  def submit_vote
+    @restaurant = Restaurant.find_by(params[:id])
+    will_count = @restaurant.will_split_count + 1
+    wont_count = @restaurant.wont_split_count + 1
+
+    if params[:vote] == "will"
+      Restaurant.find_by(params[:id]).tap{|restaurant| restaurant.will_split_count = will_count }.save
+      respond_to do |format|
+        format.html { redirect_to restaurant_url(@restaurant), notice: "Your vote of will/yes was registered" }
+      end
+    elsif params[:vote] == "wont"
+      Restaurant.find_by(params[:id]).tap{|restaurant| restaurant.wont_split_count = wont_count }.save
+      respond_to do |format|
+        format.html { redirect_to restaurant_url(@restaurant), notice: "Your vote of won't/no was registered" }
+      end
+    end
+
+  end
+
   # POST /restaurants or /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
@@ -120,6 +142,6 @@ class RestaurantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :will_split_count, :wont_split_count, :search)
+      params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :will_split_count, :wont_split_count, :search, :id, :restaurant_id)
     end
 end

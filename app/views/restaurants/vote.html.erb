@@ -2,7 +2,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h3>Vote on Splitting: Will/Won't They</h3>
+<h3>Vote on Splitting: Will or Won't They</h3>
 
 <p>
   <strong><%= @restaurant.name %></strong>
@@ -19,15 +19,12 @@
 <br>
 
 <h3>Cast your vote!</h3>
-<%= form_tag('/vote', :method => "get") do %>
-  <table>
-    <tr>
-      <td><%= radio_button_tag(:vote, "Will", :id, restaurant.id) %> Will Split</td>
-      <td><%= radio_button_tag(:vote, "Won't", :id, restaurant.id) %> Won't Split</td>
-    </tr>
-  </table>
-  <%= submit_tag("Vote") %>
-<% end %>
+<form action="/submit_vote">
+  <input type="radio" name="vote" value="will" checked> Will Split
+  <input type="radio" name="vote" value="wont"> Won't Split
+  <br><br>
+  <button type="submit" class="floated">Vote</button>
+</form>
 
 <span>
   <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>
