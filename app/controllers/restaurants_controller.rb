@@ -75,22 +75,29 @@ class RestaurantsController < ApplicationController
   end
 
   def vote
+    params[:id] = @restaurant.id
   end
 
   def submit_vote
+    param_id = params[:id]
+    puts params[:id].to_s + "sinsinsinsinsinsinsinsinsinsinsins"
+
     @restaurant = Restaurant.find_by(params[:id])
+
+    puts params[:id].to_s + "lessssssss"
+
     will_count = @restaurant.will_split_count + 1
     wont_count = @restaurant.wont_split_count + 1
 
     if params[:vote] == "will"
       Restaurant.find_by(params[:id]).tap{|restaurant| restaurant.will_split_count = will_count }.save
       respond_to do |format|
-        format.html { redirect_to restaurant_url(@restaurant), notice: "Your vote of will/yes was registered" }
+        format.html { redirect_to vote_path(@restaurant), notice: "Your vote of will was registered" }
       end
     elsif params[:vote] == "wont"
       Restaurant.find_by(params[:id]).tap{|restaurant| restaurant.wont_split_count = wont_count }.save
       respond_to do |format|
-        format.html { redirect_to restaurant_url(@restaurant), notice: "Your vote of won't/no was registered" }
+        format.html { redirect_to vote_path(@restaurant), notice: "Your vote of won't was registered" }
       end
     end
 
@@ -142,6 +149,6 @@ class RestaurantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :will_split_count, :wont_split_count, :search, :id, :restaurant_id)
+      params.require(:restaurant).permit(:name, :address, :city, :state, :zip, :will_split_count, :wont_split_count, :search, :id, :restaurant_id, :set_id)
     end
 end

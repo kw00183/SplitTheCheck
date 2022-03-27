@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :restaurants, except: [:destroy]
   root :to => 'restaurants#index'
 
-  get '/submit_vote', to: "restaurants#submit_vote"
-  get 'restaurants/:id/vote' => "restaurants#vote", :as => :vote
+  get '/submit_vote', to: "restaurants#submit_vote", controller: 'restaurants', action: 'restaurant_id'
+  get 'restaurants/:id/vote' => "restaurants#vote", :as => :vote, controller: 'restaurants', action: 'id'
   get '/search', to: "restaurants#index"
   get '/:restaurants/:id' => 'restaurants/id', controller: 'restaurants', action: 'id'
   get '*path' => redirect('/')
