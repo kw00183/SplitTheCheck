@@ -32,8 +32,8 @@
 
 <h3>Cast your vote!</h3>
 <%= form_for :restaurant, url: "/submit_vote", method: "get" do |f| %>
-  <%= radio_button_tag :vote, ["will",@restaurant.id] %> Will Split
-  <%= radio_button_tag :vote, ["wont",@restaurant.id] %> Won't Split
+  <%= radio_button_tag :vote, ["will",@restaurant.id], false, required: 'required' %> Will Split
+  <%= radio_button_tag :vote, ["wont",@restaurant.id], false, required: 'required' %> Won't Split
   <br><br>
   <%= f.submit "Vote", :method => :get, class: "floated" %>
 <% end %>
