@@ -28,14 +28,19 @@
     margin: 0;
   }
 
+  h2, h3, h4, aside {
+    margin: 0;
+    padding-bottom: 1em;
+  }
+
   .devise_container {
     margin: 0;
-    padding: 0 2em;
+    padding: 2em;
   }
 
   .restaurant_container {
     margin: 0;
-    padding: 0 2em;
+    padding: 2em;
   }
 
   .login {
