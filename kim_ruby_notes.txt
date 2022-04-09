@@ -123,6 +123,7 @@ rake test:units 	      Runs all the unit tests from test/unit
 
 # create devise views
 rails generate devise:views
+rails generate devise:controllers users
 
 Depending on your application's configuration some manual setup may be required:
 
