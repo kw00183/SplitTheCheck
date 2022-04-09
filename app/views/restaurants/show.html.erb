@@ -1,6 +1,9 @@
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
+<% if alert %>
+  <aside id="alert"><%= alert %></aside>
+<% end %>
 
 <p>
   <strong><%= @restaurant.name %></strong>

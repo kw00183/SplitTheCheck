@@ -38,6 +38,92 @@
     display: inline;
     padding-bottom: 1em;
   }
+  .content {
+   margin: 0;
+   padding: 0;
+
+   display: flex;
+   display: -webkit-flex;
+   flex-direction: column; // mobile is horizontally laid out
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+
+   @media (min-width: 30em) {
+     flex-direction: row;  // desktop is vertically laid out
+     -webkit-box-orient: horizontal;
+   }
+
+   nav {
+     padding-bottom: 1em;
+     background: #F4FCD9;
+     text-align: center;  // mobile has centered nav
+     @media (min-width: 30em) {
+       text-align: left; // desktop nav is left-aligned
+       padding: 1em;     // and needs more padding
+     }
+     #cart {
+      article {
+        h2 {
+          margin-top: 0;
+        }
+        background: white;
+        border-radius: 0.5em;
+        margin: 1em;
+        padding: 1.414em;
+        @media (min-width: 30em) {
+          margin: 0; // desktop doesn't need this margin
+        }
+      }
+    }
+
+    nav.logged_in_nav {
+      border-top: solid thin #bfb;
+      padding: 0.354em 0;
+      margin-top: 0.354em;
+      input[type="submit"] {
+        // Make the logout button look like a
+        // link, so it matches the nav style
+        background: none;
+        border: none;
+        color: #bfb;
+        font-size: 1em;
+        letter-spacing: 0.354em;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+      input[type="submit"]:hover {
+        color: white;
+      }
+    }
+
+     ul {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       @media (min-width: 30em) {
+         padding-right: 1em; // give desktop some extra space
+       }
+       li {
+         margin: 0;
+         padding: 0.5em;
+         text-transform: uppercase;
+         letter-spacing: 0.354em;
+         a {
+           color: #bfb;
+           text-decoration: none;
+         }
+         a:hover {
+           background: none;
+           color: white;
+         }
+       }
+     }
+   }
+   main {
+     padding: 0.5em;
+   }
+ }
 
 hr {
  height: 1px;
