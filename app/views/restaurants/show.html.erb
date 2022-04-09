@@ -1,9 +1,13 @@
+<div class="restaurant_container">
+
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
 <% if alert %>
   <aside id="alert"><%= alert %></aside>
 <% end %>
+
+<h3></h3>
 
 <p>
   <strong><%= @restaurant.name %></strong>
@@ -33,4 +37,6 @@
 <div>
   <%= button_to 'Edit', edit_restaurant_path(@restaurant), :method => :get, class: "floated" %>
   <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>
+</div>
+
 </div>
