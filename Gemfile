@@ -26,6 +26,8 @@ gem 'utf8-cleaner'
 
 gem 'devise'
 
+gem 'dotenv-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
