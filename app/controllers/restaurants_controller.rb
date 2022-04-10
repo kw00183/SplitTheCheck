@@ -86,26 +86,44 @@ class RestaurantsController < ApplicationController
   def submit_vote
     @vote = params[:vote].split[0]
     @restaurant_id = params[:vote].split[1]
+    @user_id = current_user.id
+
+    @user_vote = 0
 
     #puts @restaurant_id.to_s
 
     @vote_restaurant = Restaurant.find_by(id: @restaurant_id)
 
-    will_count = @vote_restaurant.will_split_count + 1
-    wont_count = @vote_restaurant.wont_split_count + 1
+    #will_count = @vote_restaurant.will_split_count + 1
+    #wont_count = @vote_restaurant.wont_split_count + 1
 
     if @vote == "will"
-      @vote_restaurant.update(will_split_count: will_count)
+      @user_vote = 1
+      @vote_history = VoteHistory.create!(user_id: @user_id, restaurant_id: @restaurant_id, vote_split: @user_vote)
+      self.restaurant_will_count(@restaurant_id)
+      self.restaurant_wont_count(@restaurant_id)
       respond_to do |format|
         format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of will was registered" }
       end
     elsif @vote == "wont"
-      @vote_restaurant.update(wont_split_count: wont_count)
+      @vote_history = VoteHistory.create!(user_id: @user_id, restaurant_id: @restaurant_id, vote_split: @user_vote)
+      self.restaurant_will_count(@restaurant_id)
+      self.restaurant_wont_count(@restaurant_id)
       respond_to do |format|
         format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of won't was registered" }
       end
     end
 
+  end
+
+  def restaurant_will_count(restaurant_id)
+    will_count = VoteHistory.where(:restaurant_id => restaurant_id, :vote_split => 1).count
+    @vote_restaurant.update(will_split_count: will_count)
+  end
+
+  def restaurant_wont_count(restaurant_id)
+    wont_count = VoteHistory.where(:restaurant_id => restaurant_id, :vote_split => 0).count
+    @vote_restaurant.update(wont_split_count: wont_count)
   end
 
   # POST /restaurants or /restaurants.json
