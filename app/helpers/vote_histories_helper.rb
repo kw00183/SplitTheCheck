@@ -1,0 +1,2 @@
+module VoteHistoriesHelper
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vote_history.user_id %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @vote_history.restaurant_id %>
+</p>
+
+<p>
+  <strong>Vote split:</strong>
+  <%= @vote_history.vote_split %>
+</p>
+
+<%= link_to 'Edit', edit_vote_history_path(@vote_history) %> |
+<%= link_to 'Back', vote_histories_path %>
