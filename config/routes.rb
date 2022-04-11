@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :vote_histories
+  resources :vote_histories, except: [:index, :show, :edit, :update, :destroy]
   devise_for :users
   resources :restaurants, except: [:destroy]
   root :to => 'restaurants#index'
+
+  # get '/vote_histories', to: "restaurants#index"
 
   get '/restaurant_will_count', to: "restaurants#restaurant_will_count"
   get '/restaurant_wont_count', to: "restaurants#restaurant_wont_count"

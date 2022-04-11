@@ -3,7 +3,7 @@ require "application_system_test_case"
 class RestaurantsTest < ApplicationSystemTestCase
   setup do
     @restaurant = restaurants(:fix_1)
-    @user = users(:user_1)
+    sign_in users(:user_1)
   end
 
   test "visiting the index" do
@@ -18,10 +18,6 @@ class RestaurantsTest < ApplicationSystemTestCase
     click_on "Search"
 
     click_on "Add Restaurant"
-
-    fill_in "Email", with: @user.email
-    fill_in "Password", with: @user.encrypted_password
-    click_on "Log in"
 
     fill_in :name, with: "Name_0"
     fill_in :address, with: "Address_0"
@@ -41,16 +37,12 @@ class RestaurantsTest < ApplicationSystemTestCase
     fill_in "Name", with: "Name_1"
     click_on "Search"
 
-    click_on "Edit", match: :first
-
-    fill_in "Email", with: @user.email
-    fill_in "Password", with: @user.encrypted_password
-    click_on "Log in"
+    all(:link, 'Edit')[1].click
 
     fill_in :name, with: @restaurant.name
     fill_in :address, with: @restaurant.address
     fill_in :city, with: @restaurant.city
-    
+
     find('#restaurant_state').select('TX')
 
     fill_in :zip, with: @restaurant.zip
