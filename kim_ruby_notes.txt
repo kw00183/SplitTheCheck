@@ -183,4 +183,14 @@ Depending on your application's configuration some manual setup may be required:
      --- system test sign in users
 
      sign_in users(:user_1)
-     
+
+     --- disable route testing
+
+     assert_response(type, message = nil) public
+
+     Asserts that the response is one of the following types:
+
+    :success: Status code was 200
+    :redirect: Status code was in the 300-399 range
+    :missing: Status code was 404
+    :error: Status code was in the 500-599 range
