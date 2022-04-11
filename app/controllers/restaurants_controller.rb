@@ -100,15 +100,13 @@ class RestaurantsController < ApplicationController
     if @vote == "will"
       @user_vote = 1
       @vote_history = VoteHistory.create!(user_id: @user_id, restaurant_id: @restaurant_id, vote_split: @user_vote)
-      self.restaurant_will_count(@restaurant_id)
-      self.restaurant_wont_count(@restaurant_id)
+      self.refresh_vote_counts(@restaurant_id)
       respond_to do |format|
         format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of will was registered" }
       end
     elsif @vote == "wont"
       @vote_history = VoteHistory.create!(user_id: @user_id, restaurant_id: @restaurant_id, vote_split: @user_vote)
-      self.restaurant_will_count(@restaurant_id)
-      self.restaurant_wont_count(@restaurant_id)
+      self.refresh_vote_counts(@restaurant_id)
       respond_to do |format|
         format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of won't was registered" }
       end
@@ -116,12 +114,17 @@ class RestaurantsController < ApplicationController
 
   end
 
-  def restaurant_will_count(restaurant_id)
+  def refresh_vote_counts(restaurant_id)
+    self.update_counts_restaurant_will_split(restaurant_id)
+    self.update_counts_restaurant_wont_split(restaurant_id)
+  end
+
+  def update_counts_restaurant_will_split(restaurant_id)
     will_count = VoteHistory.where(:restaurant_id => restaurant_id, :vote_split => 1).count
     @vote_restaurant.update(will_split_count: will_count)
   end
 
-  def restaurant_wont_count(restaurant_id)
+  def update_counts_restaurant_wont_split(restaurant_id)
     wont_count = VoteHistory.where(:restaurant_id => restaurant_id, :vote_split => 0).count
     @vote_restaurant.update(wont_split_count: wont_count)
   end

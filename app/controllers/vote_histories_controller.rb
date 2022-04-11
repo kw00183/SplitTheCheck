@@ -1,5 +1,6 @@
 class VoteHistoriesController < ApplicationController
-  before_action :set_vote_history, only: %i[ show edit update destroy ]
+  before_action :set_vote_history, only: %i[ show ]
+  before_action :restrict_destroy_edit, only: [:edit, :update, :destroy]
 
   # GET /vote_histories or /vote_histories.json
   def index

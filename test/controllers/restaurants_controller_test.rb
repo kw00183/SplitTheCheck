@@ -1,12 +1,23 @@
 require 'test_helper'
 
 class RestaurantsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @restaurant = restaurants(:fix_1)
+
+#    get '/users/sign_in'
+#    sign_in users(:user_1)
+#    post user_session_url
   end
 
   test "should get vote page" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     get vote_path(@restaurant)
+
     assert_response :success
     assert_select "h3", text: "Vote on Splitting: Will or Won't They"
   end
@@ -66,6 +77,10 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "td#restaurant_name", text: "Name_3"
 
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     get "/restaurants/3/vote"
     get '/submit_vote?vote=will%203'
 
@@ -81,6 +96,10 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select "td#restaurant_name", text: "Name_3"
+
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
 
     get "/restaurants/3/vote"
     get '/submit_vote?vote=will%203'
@@ -101,6 +120,10 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "td#restaurant_name", text: "Name_3"
 
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     get "/restaurants/3/vote"
     get '/submit_vote?vote=wont%203'
 
@@ -116,6 +139,10 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select "td#restaurant_name", text: "Name_3"
+
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
 
     get "/restaurants/3/vote"
     get '/submit_vote?vote=wont%203'
@@ -135,11 +162,19 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     get new_restaurant_url
     assert_response :success
   end
 
   test "should create restaurant" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     assert_difference('Restaurant.count') do
       post restaurants_url, params: { restaurant: { address: @restaurant.address, city: @restaurant.city, name: @restaurant.name, state: @restaurant.state, will_split_count: @restaurant.will_split_count, wont_split_count: @restaurant.wont_split_count, zip: @restaurant.zip } }
     end
@@ -153,11 +188,19 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     get edit_restaurant_url(@restaurant)
     assert_response :success
   end
 
   test "should update restaurant" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
     patch restaurant_url(@restaurant), params: { restaurant: { address: @restaurant.address, city: @restaurant.city, name: @restaurant.name, state: @restaurant.state, will_split_count: @restaurant.will_split_count, wont_split_count: @restaurant.wont_split_count, zip: @restaurant.zip } }
     assert_redirected_to restaurant_url(@restaurant)
   end
