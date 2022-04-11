@@ -5,10 +5,53 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @restaurant = restaurants(:fix_1)
+  end
 
-#    get '/users/sign_in'
-#    sign_in users(:user_1)
-#    post user_session_url
+  test "should create vote history record for will" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get vote_path(@restaurant)
+
+    assert_response :success
+    assert_select "h3", text: "Vote on Splitting: Will or Won't They"
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=will%203'
+
+    assert_equal true, VoteHistory.where(:user_id => 1, :restaurant_id => 3, :vote_split => true).exists?
+  end
+
+  test "should create vote history record for wont" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get vote_path(@restaurant)
+
+    assert_response :success
+    assert_select "h3", text: "Vote on Splitting: Will or Won't They"
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=wont%203'
+
+    assert_equal true, VoteHistory.where(:user_id => 1, :restaurant_id => 3, :vote_split => false).exists?
+  end
+
+  test "should re-route vote history index to restaurant index" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get "/vote_histories"
+
+    assert_response :redirect
+
+    get "/search?name=" + "Name_3"
+
+    assert_response :success
+    assert_select "td#restaurant_name", text: "Name_3"
   end
 
   test "should get vote page" do

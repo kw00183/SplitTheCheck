@@ -94,9 +94,6 @@ class RestaurantsController < ApplicationController
 
     @vote_restaurant = Restaurant.find_by(id: @restaurant_id)
 
-    #will_count = @vote_restaurant.will_split_count + 1
-    #wont_count = @vote_restaurant.wont_split_count + 1
-
     if @vote == "will"
       @user_vote = 1
       @vote_history = VoteHistory.create!(user_id: @user_id, restaurant_id: @restaurant_id, vote_split: @user_vote)
