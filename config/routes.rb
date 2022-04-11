@@ -4,10 +4,6 @@ Rails.application.routes.draw do
   resources :restaurants, except: [:destroy]
   root :to => 'restaurants#index'
 
-  # get '/vote_histories', to: "restaurants#index"
-
-  get '/restaurant_will_count', to: "restaurants#restaurant_will_count"
-  get '/restaurant_wont_count', to: "restaurants#restaurant_wont_count"
   get '/submit_vote', to: "restaurants#submit_vote"
   get 'restaurants/:id/vote' => "restaurants#vote", :as => :vote, controller: 'restaurants', action: 'id'
   get '/search', to: "restaurants#index"
