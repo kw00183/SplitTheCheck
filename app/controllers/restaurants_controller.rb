@@ -80,6 +80,40 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1/vote
   def vote
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  # GET /restaurants/1/comment
+  def comment
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  # GET /restaurants/1/favorite
+  def favorite
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  # post comment to database
+  def submit_comment
+    @comment_string = params[:comment]
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant_id = @restaurant.id
+    @user_id = current_user.id
+
+    @comment = Comment.create!(user_id: @user_id, restaurant_id: @restaurant_id, comment: @comment_string)
+
+    respond_to do |format|
+      format.html { redirect_to comment_path(@restaurant), notice: "Your comment was registered" }
+    end
+  end
+
+  # post favorite to database
+  def submit_favorite
+    @favorite_boolean = params[:favorite].split[0]
+    @restaurant_id = params[:favorite].split[1]
+    @user_id = current_user.id
+
+    @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @favorite_boolean)
   end
 
   # increment votes

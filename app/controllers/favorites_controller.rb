@@ -1,5 +1,6 @@
 class FavoritesController < ApplicationController
-  before_action :set_favorite, only: %i[ show edit update destroy ]
+  before_action :set_favorite, only: %i[ show ]
+  before_action :restrict_destroy_edit, only: [:edit, :update, :destroy]
 
   # GET /favorites or /favorites.json
   def index

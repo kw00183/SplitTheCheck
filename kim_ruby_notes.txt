@@ -76,6 +76,10 @@ Or, if you want to change your default branch name to main, do this:
 >bin/rails db:migrate
 >​​bin/rails​​ ​​server​
 
+---reverting to specific git commit
+git reset --hard <old-commit-id>
+git push -f <remote-name> <branch-name>
+
 ---import csv
 https://web.archive.org/web/20160307151355/http://erikonrails.snowedin.net/?p=212
 rake csv_model_import[conciousmess.csv,ripple]

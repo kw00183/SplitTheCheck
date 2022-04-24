@@ -1,0 +1,37 @@
+<div class="restaurant_container">
+
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<p>
+  <strong><%= @restaurant.name %></strong>
+</p>
+
+<p>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zip %>
+</p>
+
+<br>
+
+<p>
+  <strong>Leave a comment</strong>
+</p>
+<p>
+  <em>(max 200 characters)</em>
+</p>
+<%= form_for :restaurant, url: "/submit_comment", method: "get" do |f| %>
+  <%= text_area_tag :comment,  @comment, :size =>"40x10", :required => true %>
+  <br><br>
+  <%= f.submit "Submit", :method => :get, class: "floated" %>
+<% end %>
+
+<span>
+  <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>
+</span>
+
+<div>

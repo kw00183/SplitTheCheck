@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[ show edit update destroy ]
+  before_action :set_comment, only: %i[ show ]
+  before_action :restrict_destroy_edit, only: [:edit, :update, :destroy]
 
   # GET /comments or /comments.json
   def index
