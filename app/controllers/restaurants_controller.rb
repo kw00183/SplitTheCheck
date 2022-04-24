@@ -109,15 +109,27 @@ class RestaurantsController < ApplicationController
 
   # post favorite to database
   def submit_favorite
-    @favorite_boolean = params[:favorite]
-    @restaurant_id = params[:restaurant][:chosen_restaurant]
-    @restaurant = Restaurant.find(@restaurant_id)
+    @favorite_param = params[:favorite].split[0]
+    @restaurant_id = params[:favorite].split[1]
     @user_id = current_user.id
 
-    @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, comment: @favorite_boolean)
+    @user_favorite = 0
 
-    respond_to do |format|
-      format.html { redirect_to favorite_path(@restaurant), notice: "Your favorite was registered" }
+    @favorite_restaurant = Restaurant.find_by(id: @restaurant_id)
+
+    if @favorite_param == "yes"
+      @user_favorite = 1
+      @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @user_favorite)
+
+      respond_to do |format|
+        format.html { redirect_to favorite_path(@favorite_restaurant), notice: "Your choice was registered" }
+      end
+    elsif @favorite_param == "no"
+        @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @user_favorite)
+      
+      respond_to do |format|
+        format.html { redirect_to favorite_path(@favorite_restaurant), notice: "Your choice was registered" }
+      end
     end
   end
 

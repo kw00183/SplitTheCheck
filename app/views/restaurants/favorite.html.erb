@@ -4,11 +4,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h3>Vote on Splitting: Will or Won't They</h3>
-
-<p>
-  <strong><%= @restaurant.name %></strong>
-</p>
+<h3 class="no_margin_bottom"><%= @restaurant.name %></h3>
 
 <p>
   <%= @restaurant.address %>
@@ -18,24 +14,14 @@
   <%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zip %>
 </p>
 
-<br>
+<br><br>
 
-<p id="will">
-  <strong>Will Split:</strong> <%= @restaurant.will_split_count %> <% if @restaurant.will_split_count == 1 %>vote<% else %>votes<% end %>
-</p>
-
-<p id="wont">
-  <strong>Won't Split:</strong> <%= @restaurant.wont_split_count %> <% if @restaurant.wont_split_count == 1 %>vote<% else %>votes<% end %>
-</p>
-
-<br>
-
-<h3>Cast your vote!</h3>
-<%= form_for :restaurant, url: "/submit_vote", method: "get" do |f| %>
-  <%= radio_button_tag :vote, ["will",@restaurant.id], false, required: 'required' %> Will Split
-  <%= radio_button_tag :vote, ["wont",@restaurant.id], false, required: 'required' %> Won't Split
+<h3>Does this restaurant rate among your favorites?</h3>
+<%= form_for :restaurant, url: "/submit_favorite", method: "get" do |f| %>
+  <%= radio_button_tag :favorite, ["yes",@restaurant.id], false, required: 'required' %> Yes
+  <%= radio_button_tag :favorite, ["no",@restaurant.id], false, required: 'required' %> No
   <br><br>
-  <%= f.submit "Vote", :method => :get, class: "floated" %>
+  <%= f.submit "Submit", :method => :get, class: "floated" %>
 <% end %>
 
 <span>

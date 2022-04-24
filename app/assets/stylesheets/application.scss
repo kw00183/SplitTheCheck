@@ -27,6 +27,12 @@
     padding: 2em;
     margin: 0;
   }
+  .no_margin_bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: inline;
+    border: 0;
+  }
 
   h2, h3, h4, aside {
     margin: 0;

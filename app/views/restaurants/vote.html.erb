@@ -6,9 +6,7 @@
 
 <h3>Vote on Splitting: Will or Won't They</h3>
 
-<p>
-  <strong><%= @restaurant.name %></strong>
-</p>
+<h3 class="no_margin_bottom"><%= @restaurant.name %></h3>
 
 <p>
   <%= @restaurant.address %>
@@ -28,7 +26,7 @@
   <strong>Won't Split:</strong> <%= @restaurant.wont_split_count %> <% if @restaurant.wont_split_count == 1 %>vote<% else %>votes<% end %>
 </p>
 
-<br>
+<br><br>
 
 <h3>Cast your vote!</h3>
 <%= form_for :restaurant, url: "/submit_vote", method: "get" do |f| %>

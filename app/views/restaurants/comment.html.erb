@@ -4,9 +4,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<p>
-  <strong><%= @restaurant.name %></strong>
-</p>
+<h3 class="no_margin_bottom"><%= @restaurant.name %></h3>
 
 <p>
   <%= @restaurant.address %>
@@ -16,11 +14,9 @@
   <%= @restaurant.city %>, <%= @restaurant.state %> <%= @restaurant.zip %>
 </p>
 
-<br>
+<br><br>
 
-<p>
-  <strong>Leave a comment</strong>
-</p>
+<h3 class="no_margin_bottom">Leave a comment</h3>
 <p>
   <em>(max 200 characters)</em>
 </p>
