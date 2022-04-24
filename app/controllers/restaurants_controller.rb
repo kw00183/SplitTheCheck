@@ -96,8 +96,8 @@ class RestaurantsController < ApplicationController
   # post comment to database
   def submit_comment
     @comment_string = params[:comment]
-    @restaurant = Restaurant.find(params[:id])
-    @restaurant_id = @restaurant.id
+    @restaurant_id = params[:restaurant][:chosen_restaurant]
+    @restaurant = Restaurant.find(@restaurant_id)
     @user_id = current_user.id
 
     @comment = Comment.create!(user_id: @user_id, restaurant_id: @restaurant_id, comment: @comment_string)
@@ -109,11 +109,16 @@ class RestaurantsController < ApplicationController
 
   # post favorite to database
   def submit_favorite
-    @favorite_boolean = params[:favorite].split[0]
-    @restaurant_id = params[:favorite].split[1]
+    @favorite_boolean = params[:favorite]
+    @restaurant_id = params[:restaurant][:chosen_restaurant]
+    @restaurant = Restaurant.find(@restaurant_id)
     @user_id = current_user.id
 
-    @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @favorite_boolean)
+    @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, comment: @favorite_boolean)
+
+    respond_to do |format|
+      format.html { redirect_to favorite_path(@restaurant), notice: "Your favorite was registered" }
+    end
   end
 
   # increment votes
