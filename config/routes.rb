@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :comments
+  resources :favorites
   resources :vote_histories, except: [:index, :show, :edit, :update, :destroy]
   devise_for :users
   resources :restaurants, except: [:destroy]
