@@ -1,1 +1,98 @@
-<%= @user.email %>
+<div class="restaurant_container">
+
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h3>Summary of Activities</h3>
+
+<h3>Comment Activity</h3>
+<% if @comment_activity.blank? == false %>
+<table class="fill_width text_align_left">
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>Comment</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comment_activity.each do |comment_activity| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td id="comment_restaurant_name"><%= name_link(comment_activity.name, restaurant_path(comment_activity.restaurant_id)) %></td>
+        <td id="restaurant_comment"><%= comment_activity.comment %></td>
+        <td id="comment_date"><%= comment_activity.created_at.strftime("%m-%d-%Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<p>No comments made</p>
+<% end %>
+
+<br><br>
+
+<h3>Vote Activity</h3>
+<% if @vote_activity.blank? == false %>
+<table class="fill_width text_align_left">
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>Vote</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vote_activity.each do |vote_activity| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td id="vote_restaurant_name"><%= name_link(vote_activity.name, restaurant_path(vote_activity.restaurant_id)) %></td>
+        <% if vote_activity.vote_split == true %>
+          <td id="restaurant_vote">Will Split</td>
+        <% else %>
+          <td id="restaurant_vote">Won't Split</td>
+        <% end %>
+        <td id="vote_date"><%= vote_activity.created_at.strftime("%m-%d-%Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<p>No vote selections made</p>
+<% end %>
+
+<br><br>
+
+<h3>Favorite Activity</h3>
+<% if @favorite_activity.blank? == false %>
+<table class="fill_width text_align_left">
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorite_activity.each do |favorite_activity| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td id="favorite_restaurant_name"><%= name_link(favorite_activity.name, restaurant_path(favorite_activity.restaurant_id)) %></td>
+        <td id="favorite_date"><%= favorite_activity.created_at.strftime("%m-%d-%Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<p>No favorite selections made</p>
+<% end %>
+
+<br><br>
+
+<span>
+  <%= button_to 'Close', restaurants_path, :method => :get, class: "floated" %>
+</span>
+
+<br><br>
+
+<div>

@@ -49,6 +49,20 @@
     padding: 2em;
   }
 
+  tr.list_line_odd {
+    background-color: #F4FCD9;
+  }
+
+  table.fill_width {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  table.text_align_left {
+    text-align: left;
+  }
+
   .login {
     text-align: center; // center on mobile
     @media (min-width: 30em) {

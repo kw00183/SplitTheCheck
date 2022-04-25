@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: %i[ show edit update vote ]
+  before_action :set_restaurant, only: %i[ show edit update vote comment favorite ]
 
   def inititialize
     self.clear_restaurants_list
@@ -113,20 +113,23 @@ class RestaurantsController < ApplicationController
     @restaurant_id = params[:favorite].split[1]
     @user_id = current_user.id
 
-    @user_favorite = 0
-
     @favorite_restaurant = Restaurant.find_by(id: @restaurant_id)
 
     if @favorite_param == "yes"
-      @user_favorite = 1
+      @user_favorite = true
       @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @user_favorite)
 
       respond_to do |format|
         format.html { redirect_to favorite_path(@favorite_restaurant), notice: "Your choice was registered" }
       end
     elsif @favorite_param == "no"
-        @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @user_favorite)
-      
+
+      puts "bobobobobobobobobo1" + @restaurant_id.to_s
+      puts "bobobobobobobobobo2" + @favorite_restaurant.to_s
+
+      @user_favorite = false
+      @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @user_favorite)
+
       respond_to do |format|
         format.html { redirect_to favorite_path(@favorite_restaurant), notice: "Your choice was registered" }
       end
@@ -159,7 +162,6 @@ class RestaurantsController < ApplicationController
         format.html { redirect_to vote_path(@vote_restaurant), notice: "Your vote of won't was registered" }
       end
     end
-
   end
 
   def refresh_vote_counts(restaurant_id)
