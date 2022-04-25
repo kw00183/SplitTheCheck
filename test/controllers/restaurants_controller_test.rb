@@ -7,6 +7,119 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
     @restaurant = restaurants(:fix_1)
   end
 
+  test "should create comment record" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get comment_path(@restaurant)
+
+    assert_response :success
+    assert_select "h3#header_comment", text: "Leave a comment"
+
+    get "/restaurants/3/comment"
+    get '/submit_comment?restaurant[chosen_restaurant]=3&comment=Testing+Testing&commit=Submit'
+
+    assert_equal true, Comment.where(:user_id => 1, :restaurant_id => 3, :comment => 'Testing Testing').exists?
+  end
+
+  test "should create favorite record of yes" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get favorite_path(@restaurant)
+
+    assert_response :success
+    assert_select "h3#header_favorite", text: "Does this restaurant rate among your favorites?"
+
+    get "/restaurants/3/favorite"
+    get '/submit_favorite?favorite=yes%203'
+
+    assert_equal true, Favorite.where(:user_id => 1, :restaurant_id => 3, :favorite_restaurant => true).exists?
+  end
+
+  test "should create favorite record of no" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get favorite_path(@restaurant)
+
+    assert_response :success
+    assert_select "h3#header_favorite", text: "Does this restaurant rate among your favorites?"
+
+    get "/restaurants/3/favorite"
+    get '/submit_favorite?favorite=no%203'
+
+    assert_equal true, Favorite.where(:user_id => 1, :restaurant_id => 3, :favorite_restaurant => false).exists?
+  end
+
+  test "should go to summary page" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    @user = users(:user_1)
+    @user_id = @user.id
+
+    get summary_path(@user_id)
+
+    assert_response :success
+    assert_select "h2#header_summary", text: "Summary of Activities"
+  end
+
+  test "summary should have comments" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get "/restaurants/3/comment"
+    get '/submit_comment?restaurant[chosen_restaurant]=3&comment=Testing+Testing&commit=Submit'
+
+    @user = users(:user_1)
+    @user_id = @user.id
+
+    get summary_path(@user_id)
+
+    assert_response :success
+    assert_select "th#comment_restaurant_header", text: "Restaurant"
+  end
+
+  test "summary should have votes" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get "/restaurants/3/vote"
+    get '/submit_vote?vote=will%203'
+
+    @user = users(:user_1)
+    @user_id = @user.id
+
+    get summary_path(@user_id)
+
+    assert_response :success
+    assert_select "th#vote_restaurant_header", text: "Restaurant"
+  end
+
+  test "summary should have favorites" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get "/restaurants/3/favorite"
+    get '/submit_favorite?favorite=yes%203'
+
+    @user = users(:user_1)
+    @user_id = @user.id
+
+    get summary_path(@user_id)
+
+    assert_response :success
+    assert_select "th#favorite_restaurant_header", text: "Restaurant"
+  end
+
   test "should create vote history record for will" do
     get '/users/sign_in'
     sign_in users(:user_1)

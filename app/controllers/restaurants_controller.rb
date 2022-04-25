@@ -123,10 +123,6 @@ class RestaurantsController < ApplicationController
         format.html { redirect_to favorite_path(@favorite_restaurant), notice: "Your choice was registered" }
       end
     elsif @favorite_param == "no"
-
-      puts "bobobobobobobobobo1" + @restaurant_id.to_s
-      puts "bobobobobobobobobo2" + @favorite_restaurant.to_s
-
       @user_favorite = false
       @favorite = Favorite.create!(user_id: @user_id, restaurant_id: @restaurant_id, favorite_restaurant: @user_favorite)
 

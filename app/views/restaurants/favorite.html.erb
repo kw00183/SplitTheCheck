@@ -16,7 +16,7 @@
 
 <br><br>
 
-<h3>Does this restaurant rate among your favorites?</h3>
+<h3 id="header_favorite">Does this restaurant rate among your favorites?</h3>
 <%= form_for :restaurant, url: "/submit_favorite", method: "get" do |f| %>
   <%= radio_button_tag :favorite, ["yes",@restaurant.id], false, required: 'required' %> Yes
   <%= radio_button_tag :favorite, ["no",@restaurant.id], false, required: 'required' %> No
