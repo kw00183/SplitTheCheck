@@ -4,9 +4,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<p>
-  <strong><%= @restaurant.name %></strong>
-</p>
+<h3 class="no_margin_bottom"><%= @restaurant.name %></h3>
 
 <p>
   <%= @restaurant.address %>
@@ -28,7 +26,32 @@
   <%= @restaurant.wont_split_count %> votes
 </p>
 
-<br>
+<br><br>
+
+<% if @restaurant_comments.blank? == false %>
+<table class="fill_width text_align_left">
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurant_comments.each do |restaurant_comment| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td id="restaurant_comment"><%= restaurant_comment.comment %></td>
+        <td id="comment_date"><%= restaurant_comment.created_at.strftime("%m-%d-%Y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+<p id="no_comment">No comments made</p>
+<% end %>
+
+<br><br>
+
 <div>
   <%= button_to 'Edit', edit_restaurant_path(@restaurant), :method => :get, class: "floated" %>
   <%= button_to 'Cancel', restaurants_path, :method => :get, class: "floated" %>

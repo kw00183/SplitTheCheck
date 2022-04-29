@@ -43,6 +43,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1 or /restaurants/1.json
   def show
+    @restaurant_comments = Comment.where(:restaurant_id => params[:id])
   end
 
   # GET /restaurants/new
@@ -132,15 +133,13 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  # increment votes
+  # post vote to database
   def submit_vote
     @vote = params[:vote].split[0]
     @restaurant_id = params[:vote].split[1]
     @user_id = current_user.id
 
     @user_vote = 0
-
-    #puts @restaurant_id.to_s
 
     @vote_restaurant = Restaurant.find_by(id: @restaurant_id)
 
