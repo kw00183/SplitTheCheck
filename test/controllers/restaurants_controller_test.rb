@@ -7,6 +7,28 @@ class RestaurantsControllerTest < ActionDispatch::IntegrationTest
     @restaurant = restaurants(:fix_1)
   end
 
+  test "should show comment on restaurant page" do
+    get '/users/sign_in'
+    sign_in users(:user_1)
+    post user_session_url
+
+    get comment_path(@restaurant)
+
+    assert_response :success
+    assert_select "h3#header_comment", text: "Leave a comment"
+
+    get "/restaurants/3/comment"
+    get '/submit_comment?restaurant[chosen_restaurant]=3&comment=Testing+Testing&commit=Submit'
+
+    get "/search?name=" + "Name_3"
+
+    get restaurant_path(3)
+
+    assert_response :success
+    assert_select "td#restaurant_comment", text: "Testing Testing"
+
+  end
+
   test "should create comment record" do
     get '/users/sign_in'
     sign_in users(:user_1)
